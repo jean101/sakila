@@ -8,41 +8,9 @@
 </head>
 <body>
 
-<h1>Bienvenidos a mi pagina principal <?php $nombrePagina; ?> </h1>
 
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link active" href="#">Inicio</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="actor.php">Actor</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href=""></a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-</ul>
-
+<?php
+include "partes/partes_menu.php";
+?>;
 </body>
 </html>

@@ -6,4 +6,4 @@ $nombrePagina = "principal";
 
 
 
-include_once "vistas/vista_principal.php";
+include_once "vistas/partes/partes_menu.php";
