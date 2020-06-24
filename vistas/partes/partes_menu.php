@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> <?php $nombrePagina; ?> </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-</head>
-<body>
-
-<h1>Bienvenidos a mi pagina principal <?php $nombrePagina; ?> </h1>
 
 <ul class="nav">
     <li class="nav-item">
@@ -44,5 +33,3 @@
     </li>
 </ul>
 
-</body>
-</html>
