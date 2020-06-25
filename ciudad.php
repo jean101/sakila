@@ -3,6 +3,15 @@
 $nombrePagina = "ciudad";
 
 
+$ciudad = $_GET["$ciudad"] ?? "";
+$idPais = $_GET["$idPais"] ?? "";
+
+if (isset($_GET["guardar ciudad"])) {
+    
+    echo "guardar ciudad...";
+    
+}
+
 
 
 

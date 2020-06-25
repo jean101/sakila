@@ -1,35 +1,36 @@
+<nav class="nav flex-column">
 
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link active" href="#">Inicio</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="actor.php">Actor</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="direccion.php">Direccion</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="ciudad.php">ciudad</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="pais.php">pais</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="cliente.php">cliente</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="pelicula.php">pelicula</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="idioma.php">idioma</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="personal.php">personal</a>
-    </li>
+  <?php
 
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-</ul>
+   $paginasMenu = [
+
+    "index"  => ["inicio", "fas fa-home"],
+    "Actor"  => ["Actor", "fas fa-user-tie"],
+    "direccion"  => ["direccion", "fas fa-map-marker-alt"],
+    "ciudad"  => ["ciudad", "fas fa-city"],
+    "pais"  => ["pais", "fas fa-flag"],
+    "categoria"  => ["categoria", "fa fa-tag"],
+    "cliente"  => ["cliente", "fa fa-user-tag"],
+    "pelicula"  => ["pelicula", "fa fa-video"],
+    "idioma"  => ["idioma", "fa fa-language"],
+    "personal"  => ["personal", "fa fa-users"],
+    "tienda"  => ["tienda", "fa fa-store"],
+
+
+   ];
+
+  foreach ($paginasMenu as $nombreArchivo => $pagina) {
+  $icono = $pagina[1];
+  $textoPagina = $pagina[0];
+
+  echo "<a class=\"nav-link\" href=\"{$nombreArchivo}.php\">
+  <i  class=\"{$icono} d-inline-block mr-3\" style= 'widht: 20px; ' ></i>
+  {$textoPagina}
+  </a>";
+
+ }
+
+ ?>
+
+ </nav>
 

@@ -85,7 +85,9 @@
    </div>
 
    <div class="mb-3">
-   <button class="submit" name="guardarDireccion" class="btn btn-primary">Guardar direccion</button>
+
+   <button type="submit" name="guardarDireccion" class="btn btn-primary">guardar Direccion</button>
+
    </div>
 
 
