@@ -8,10 +8,26 @@
 </head>
 <body>
 
+<nav class="navbar navbar-light bg-light">
+<a class="navbar-brand" href="#">
 
+<img src="" alt="">
+</a>
+
+</nav>
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2">
 <?php
-include "partes/partes_menu.php";
-?>
+    include "partes/partes_menu.php";
+    ?>
+</div>
+
+<div class="col-md-10">
+<h3><?php echo $nombrePagina; ?></h3>
 
 </body>
 </html>
