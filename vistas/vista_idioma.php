@@ -30,5 +30,29 @@
 <div class="col-md-10">
 <h3><?php echo $nombrePagina; ?></h3>
 
+
+<hr>
+
+<div class="row">
+
+<div class="mb-5">
+
+<form action="" method="get">
+
+<div class="mb-3">
+<label for="idioma" class="form-label">Introduzca el idioma</label>
+<input type="text" name="idioma" class="form-control" id="titulo" placeholder="Introduzca el idioma">
+
+
+</div>
+<div class="mb-3">
+<input type="button" class="btn btn-primary" value="guardar idioma">
+
+
+</div>
+</form>
+</div>
+</div>
+
 </body>
 </html>
