@@ -2,7 +2,7 @@
 
 $nombrePagina = "categoria";
 
-$nombre = $_GET["$nombre"] ?? "";
+$nombre = $_GET["nombre"] ?? "";
 
 if (isset($_GET["Enviar categoria"])) {
     

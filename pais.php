@@ -3,7 +3,7 @@
 $nombrePagina = "pais";
 
 
-$pais = $_GET["$Pais"] ?? "";
+$pais = $_GET["Pais"] ?? "";
 
 if (isset($_GET["guardar pais"])) {
     

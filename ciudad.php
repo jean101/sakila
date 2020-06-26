@@ -3,10 +3,10 @@
 $nombrePagina = "ciudad";
 
 
-$ciudad = $_GET["$ciudad"] ?? "";
-$idPais = $_GET["$idPais"] ?? "";
+$ciudad = $_GET["ciudad"] ?? "";
+$idPais = $_GET["idPais"] ?? "";
 
-if (isset($_GET["guardar ciudad"])) {
+if (isset($_GET["guardar datos"])) {
     
     echo "guardar ciudad...";
     

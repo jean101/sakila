@@ -1,7 +1,7 @@
 <?php
 $nombrePagina = "idioma";
 
-$idioma = $_GET["$idioma"] ?? "";
+$idioma = $_GET["idioma"] ?? "";
 
 if (isset($_GET["guardar idioma"])) {
     

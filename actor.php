@@ -2,8 +2,8 @@
 $nombrePagina = "Actor";
 
 
-$nombreActor = $_GET["$nombreActor"] ?? "";
-$apellidoActor = $_GET["$apellidoActor"] ?? "";
+$nombreActor = $_GET["nombreActor"] ?? "";
+$apellidoActor = $_GET["apellidoActor"] ?? "";
 
 if (isset($_GET["guardar actor"])) {
     
