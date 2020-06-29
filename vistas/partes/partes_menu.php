@@ -1,7 +1,7 @@
 <nav class="nav flex-column">
 
 <nav class="navbar navbar-light bg-primary">
-  <div class="animate__backInDown delay-3s infinite">
+  <div class="">
     <a class="navbar-brand" href="#">
       <img src="http://freevector.co/wp-content/uploads/2013/03/2333-play-button1.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
       sakila
@@ -38,7 +38,7 @@
 
  }
 
- 
+
  ?>
 
  </nav>

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> <?php $nombrePagina; ?> </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
-</head>
 <body>
 
 <nav class="navbar navbar-light bg-light">
@@ -26,12 +18,14 @@
 
 <?php
     include "partes/partes_menu.php";
-    ?>
+    include "partes/partes_head.php";
+
+?>
 </div>
 
 <div class="col-md-10">
 
-<h3><?php echo $nombrePagina; ?></h3>
+<h3 class="ty"><?php echo $nombrePagina; ?></h3>
 
 <hr>
 
@@ -42,25 +36,25 @@
 
  <div class="mb-3">
 
-  <label for="direccion">direccion</label>
+  <label for="direccion">Direccion</label>
   <input type="text" name="direccion" id="direccion" class="form-control">
  </div>
 
   <div class="mb-3">
 
-    <label for="direccion2">direccion 2</label>
+    <label for="direccion2">Direccion 2</label>
     <input type="text" name="direccion2" id="direccion2" class="form-control">
 
    </div>
 
   <div class="mb-3">
-    <label for="district">district</label>
+    <label for="district">District</label>
     <input type="text" name="district" id="district" class="form-control">
   </div>
 
    <div class="mb-3">
-     <label for="district">district</label>
-     <input type="text" name="district" id="district" class="form-control">
+     <label for="IDciudad">ID de la ciudad</label>
+     <input type="text" name="IDciudad" id="IDciudad" class="form-control">
    </div>
 
    <div class="mb-3">
@@ -87,7 +81,7 @@
 
    <div class="mb-3">
 
-   <button type="submit" name="guardarDireccion" class="btn btn-primary">guardar Direccion</button>
+   <button type="submit" name="guardarDireccion" class="btn btn-success">guardar Direccion</button>
 
    </div>
 

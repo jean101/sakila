@@ -1,6 +1,6 @@
 <?php
 
-$nombrePagina = "principal";
+$nombrePagina = "Bienvenidos a la pagina principal";
 
 
 $monto = $_GET ["monto"] ?? "";

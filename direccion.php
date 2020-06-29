@@ -7,6 +7,8 @@ $distrito = $_GET["distrito"] ?? "";
 $ciudad = $_GET["ciudad"] ?? "";
 $codigoPostal = $_GET["codigoPostal"] ?? "";
 $telefono = $_GET["telefono"] ?? "";
+$direccion = $_GET["IDciudad"] ?? "";
+
 
 if (isset ($_GET["guardar direccion"])) {
 
