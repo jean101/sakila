@@ -1,13 +1,8 @@
-<nav class="nav flex-column">
 
 <nav class="navbar navbar-light bg-primary">
-  <div class="">
-    <a class="navbar-brand" href="#">
-      <img src="http://freevector.co/wp-content/uploads/2013/03/2333-play-button1.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-      sakila
-    </a>
-  </div>
+    <a class="navbar-brand text-white container-fluid" href="#">Sakila</a>
 </nav>
+
   <?php
 
    $paginasMenu = [
@@ -32,7 +27,7 @@
   $textoPagina = $pagina[0];
 
   echo "<a class=\"nav-link\" href=\"{$nombreArchivo}.php\">
-  <i  class=\"{$icono} d-inline-block mr-3\" style= 'width: 20px; ' ></i>
+  <i  class=\"{$icono} d-inline-block mr-2\" style= 'width: 20px; ' ></i>
   {$textoPagina}
   </a>";
 
@@ -41,5 +36,4 @@
 
  ?>
 
- </nav>
 

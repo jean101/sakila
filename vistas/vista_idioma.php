@@ -1,18 +1,7 @@
 
 <body>
 
-
-<nav class="navbar navbar-light bg-light">
-<a class="navbar-brand" href="#">
-
-<img src="" alt="">
-</a>
-
-</nav>
-
-
-
-<div class="container-fluid">
+<div class="">
 <div class="row">
 <div class="col-md-2">
 <?php
@@ -35,8 +24,11 @@
 <form action="" method="get">
 
 <div class="mb-3">
-<label for="idioma" class="form-label">Introduzca el idioma</label>
-<input type="text" name="idioma" class="form-control" id="titulo" placeholder="Introduzca el idioma">
+     <label for="idioma"> Identifique su idioma</label>
+     <select name="idioma" id="idioma" class="form-select">
+        <option value="">Identifique su idioma</option>
+     </select>
+   </div>
 
 </div>
 </div>

@@ -1,24 +1,17 @@
 
+<?php
+    include "partes/partes_head.php";
+
+?>
+
 <body>
 
 
-<nav class="navbar navbar-light bg-light">
-<a class="navbar-brand" href="#">
-
-<img src="" alt="">
-</a>
-
-</nav>
-
-
-
-<div class="container-fluid">
+<div class="">
 <div class="row">
 <div class="col-md-2">
-<?php
-    include "partes/partes_menu.php";
-    include "partes/partes_head.php";
-
+  <?php
+include "partes/partes_menu.php";
 ?>
 </div>
 

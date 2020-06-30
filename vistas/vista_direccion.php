@@ -1,16 +1,10 @@
 
 <body>
 
-<nav class="navbar navbar-light bg-light">
-<a class="navbar-brand" href="#">
-
-<img src="" alt="">
-</a>
-
-</nav>
 
 
-<div class="container-fluid">
+
+<div class="">
 
 <div class="row">
 
