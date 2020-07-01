@@ -1,4 +1,6 @@
-
+<?php
+include_once "partes/partes_head.php";
+?>
 <body>
 
 
@@ -8,7 +10,6 @@
 <div class="col-md-2">
 <?php
     include "partes/partes_menu.php";
-    include "partes/partes_head.php";
 
 
 ?>
@@ -25,9 +26,9 @@
 <form action="" method="get">
 
 <div class="mb-3">
-<label for="Pais" class="form-label">pais</label>
-<input type="text" name="pais" class="form-control" id="Pais" placeholder="Escribe el pais ">
-
+     <label for="pais">pais</label>
+     <select name="pais" id="pais" class="form-select">
+        <option value="">Aqui va el listado de los paises</option>
 </form>
 
 </div>

@@ -5,12 +5,13 @@ $usuario = "root";
 $contrasena = "carlos0313";
 
 
-$errores = [];
+$ajustes = [19=>2];
 try {
-    $conexion = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $contrasena);
+    $conexion = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $contrasena,$ajustes);
 
 } catch (PDOException $exception) {
-array_push($errores, $exception->getMessage());
+
+    throw new Exception("Ha ocurrido un error al conectarnos a la base de datos {$exception->getMessage()}");
 }
 
 

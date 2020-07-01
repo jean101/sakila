@@ -1,7 +1,7 @@
 
 <?php
     include "partes/partes_head.php";
-
+ 
 ?>
 
 <body>
@@ -66,8 +66,6 @@ include "partes/partes_menu.php";
 </div>
 
 <hr>
-
-
 
 
 <p>nombre: <?php echo $nombre; ?></p>
