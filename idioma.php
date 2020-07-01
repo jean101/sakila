@@ -1,9 +1,13 @@
 <?php
 $nombrePagina = "idioma";
 
-$idioma = $_GET["idioma"] ?? "";
+require_once "modelos/modelo_idioma.php";
 
-if (isset($_GET["guardar idioma"])) {
+$idiomas = obtenerIdiomas($conexion);
+
+$lenguaje = $_GET["lenguaje"] ?? "";
+
+if (isset($_GET["guardar lenguaje"])) {
     
     
     

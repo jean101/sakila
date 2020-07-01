@@ -24,16 +24,24 @@
 <form action="" method="get">
 
 <div class="mb-3">
-     <label for="idioma"> Identifique su idioma</label>
-     <select name="idioma" id="idioma" class="form-select">
+     <label for="lenguaje"> Identifique su idioma</label>
+     <select name="lenguaje" id="lenguaje" class="form-select">
         <option value="">Identifique su idioma</option>
+
+        <?php
+
+         foreach ($idiomas as $idioma) {
+
+             echo "  <option value=\"{$idioma["name"]}\">{$idioma["name"]}</option>";
+         }
+         ?>
      </select>
    </div>
 
 </div>
 </div>
 <div class="mb-3">
-<input type="button" class="btn btn-success" value="guardar idioma">
+<input type="button" class="btn btn-success" value="guardar lenguaje">
 
 
 </div>

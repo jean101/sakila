@@ -26,6 +26,17 @@
      <label for="IDtienda"> ciudad</label>
      <select name="tienda" id="IDtienda" class="form-select">
         <option value="">Introducir el id tienda</option>
+
+        <?php
+
+         foreach ($clientes as $cliente) {
+
+             echo "  <option value=\"{$cliente["store_id"]}\">{$cliente["store_id"]}</option>";
+         }
+         ?>
+
+        
+        
      </select>
    </div>
 
@@ -49,6 +60,14 @@
      <label for="IDdireccion"> Id direccion</label>
      <select name="direccion" id="IDdireccion" class="form-select">
         <option value="">Introducir el id direccion</option>
+
+        <?php
+
+         foreach ($clientes as $cliente) {
+
+             echo "  <option value=\"{$cliente["address_id"]}\">{$cliente["address_id"]}</option>";
+         }
+         ?>
      </select>
    </div>
 

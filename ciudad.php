@@ -3,6 +3,7 @@
 $nombrePagina = "ciudad";
 
 
+
 $ciudad = $_GET["ciudad"] ?? "";
 $idPais = $_GET["idPais"] ?? "";
 

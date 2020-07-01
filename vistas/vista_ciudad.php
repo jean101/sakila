@@ -27,6 +27,7 @@
      <label for="ciudad"> ciudad</label>
      <select name="ciudad" id="ciudad" class="form-select">
         <option value="">Nombre de la ciudad</option>
+        
      </select>
    </div>
 
@@ -34,6 +35,7 @@
      <label for="IDciudad"> ciudad</label>
      <select name="idciudad" id="IDciudad" class="form-select">
         <option value="">Aqui va el id de la ciudad</option>
+
      </select>
    </div>
 
