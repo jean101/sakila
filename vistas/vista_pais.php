@@ -18,7 +18,7 @@ include_once "partes/partes_head.php";
 <div class="col-md-10">
 <h3 class="uy"><?php echo $nombrePagina; ?></h3>
 
-<hr>
+<hr class="jj">
 
 <div class="row">
 
@@ -26,7 +26,7 @@ include_once "partes/partes_head.php";
 <form action="" method="get">
 
 <div class="mb-3">
-     <label for="pais">pais</label>
+     <label for="pais" class="qw">pais</label>
      <select name="pais" id="pais" class="form-select">
         <option value="">Aqui va el listado de los paises</option>
 
@@ -41,7 +41,8 @@ foreach ($paises as $pais) {
 
 </div>
 
-<div class="mb-3">
+<br>
+<div class="mb-5">
 <input type="button" class="btn btn-success" value="Guardar pais">
 
 

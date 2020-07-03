@@ -21,7 +21,7 @@
 
 <h3 class="ty"><?php echo $nombrePagina; ?></h3>
 
-<hr>
+<hr class="ll">
 
 <div class="row">
 
@@ -30,29 +30,29 @@
 
  <div class="mb-3">
 
-  <label for="direccion">Direccion</label>
+  <label class="jk" for="direccion">Direccion</label>
   <input type="text" name="direccion" id="direccion" class="form-control">
  </div>
 
   <div class="mb-3">
 
-    <label for="direccion2">Direccion 2</label>
+    <label class="yh" for="direccion2">Direccion 2</label>
     <input type="text" name="direccion2" id="direccion2" class="form-control">
 
    </div>
 
   <div class="mb-3">
-    <label for="district">District</label>
+    <label class="ty" for="district">District</label>
     <input type="text" name="district" id="district" class="form-control">
   </div>
 
    <div class="mb-3">
-     <label for="IDciudad">ID de la ciudad</label>
+     <label class="ui" for="IDciudad">ID de la ciudad</label>
      <input type="text" name="IDciudad" id="IDciudad" class="form-control">
    </div>
 
    <div class="mb-3">
-     <label for="ciudad"> ciudad</label>
+     <label class="hn" for="ciudad"> ciudad</label>
      <select name="ciudad" id="ciudad" class="form-select">
         <option value="">Aqui va el listado de la ciudad, desde sql</option>
          <?php
@@ -66,17 +66,17 @@
    </div>
 
    <div class="mb-3">
-     <label for="codigoPostal">codigo postal</label>
+     <label class="nm" for="codigoPostal">codigo postal</label>
      <input type="text" name="codigoPostal" id="codigoPostal" class="form-control">
    </div>
 
    <div class="mb-3">
-     <label for="telefono">numero de telefono</label>
+     <label class="kl " for="telefono">numero de telefono</label>
      <input type="tel" name="telefono" id="telefono" class="form-control">
    </div>
 
    <div class="mb-3">
-     <label for="locacion">ubicacion</label>
+     <label class="vb" for="locacion">ubicacion</label>
      <input type="text" name="locacion" id="telefono" class="form-control">
    </div>
 

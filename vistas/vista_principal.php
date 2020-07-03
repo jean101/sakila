@@ -18,38 +18,38 @@ include "partes/partes_menu.php";
 <div class="col-md-10">
 <h3 class="hola"><?php echo $nombrePagina; ?></h3>
 
-<hr>
+<hr class="gf">
 
 <div class="row">
 <div class="col-md-5">
 <form action="" method="get">
 <div class="mb-3">
-  <label for="inputNombre" class="form-label">nombre</label>
+  <label class="er" for="inputNombre" class="form-label">nombre</label>
   <input type="text" name="nombre" class="form-control" id="inputNombre" placeholder="Escribe tu nombre">
 </div>
 
 <div class="mb-3">
-<label for="inputCiudad" class="form-label">ciudad</label>
+<label class="ik" for="inputCiudad" class="form-label">ciudad</label>
 <input type="text" name="ciudad" class="form-control" id="inputCiudad" placeholder="Escribe el nombre de la ciudad ">
 
 </div>
 
 <div class="mb-3">
-<label for="inputEdad" class="form-label">Edad</label>
+<label class="hg" for="inputEdad" class="form-label">Edad</label>
 <input type="text" name="Edad" class="form-control" id="inputEdad" placeholder="Escribe tu edad ">
 
 
 </div>
 
 <div class="mb-3">
-<label for="inputBusqueda" class="form-label">Busqueda</label>
+<label class="uj" for="inputBusqueda" class="form-label">Busqueda</label>
 <input type="text" name="Busqueda" class="form-control" id="inputBusqueda" placeholder="Escribe la busqueda ">
 
 
 </div>
 
 <div class="mb-3">
-<label for="inputMonto" class="form-label">Monto</label>
+<label class="ds" for="inputMonto" class="form-label">Monto</label>
 <input type="text" name="monto" class="form-control" id="inputMonto" placeholder="Escribe el monto ">
 
 
@@ -65,14 +65,14 @@ include "partes/partes_menu.php";
 
 </div>
 
-<hr>
+<hr class="ttt">
 
 
-<p>nombre: <?php echo $nombre; ?></p>
-<p>ciudad: <?php echo $ciudad; ?></p>
-<p>Edad: <?php echo $edad; ?></p>
-<p>Busqueda: <?php echo $q; ?></p>
-<p>Monto: <?php echo $monto; ?></p>
+<p class="rrr">nombre: <?php echo $nombre; ?></p>
+<p class="vvv">ciudad: <?php echo $ciudad; ?></p>
+<p class="iii">Edad: <?php echo $edad; ?></p>
+<p class="mnn">Busqueda: <?php echo $q; ?></p>
+<p class="jhh">Monto: <?php echo $monto; ?></p>
 
 </div>
 </div>

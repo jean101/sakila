@@ -15,7 +15,7 @@
 <h3 class="er"><?php echo $nombrePagina; ?></h3>
 
 
-<hr>
+<hr class="ff">
 
 <div class="row">
 
@@ -24,7 +24,7 @@
 <form action="" method="get">
 
 <div class="mb-3">
-     <label for="lenguaje"> Identifique su idioma</label>
+     <label class="dc" for="lenguaje"> Identifique su idioma</label>
      <select name="lenguaje" id="lenguaje" class="form-select">
         <option value="">Identifique su idioma</option>
 

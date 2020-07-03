@@ -17,7 +17,7 @@
         <div class="col-md-10">
             <h3 class="hey"><?php echo $nombrePagina; ?></h3>
 
-            <hr>
+            <hr class="ww">
 
 
             <div class="row">

@@ -17,7 +17,7 @@
 <div class="col-md-10">
 <h3 class="xc"><?php echo $nombrePagina; ?></h3>
 
-<hr>
+<hr class="rr">
 
 
 
@@ -27,7 +27,7 @@
 <form action=""method="get">
 
 <div class="mb-3">
-     <label for="IDmanager"> id del manager</label>
+     <label class="rf" for="IDmanager"> id del manager</label>
      <select name="IDmanager" id="IDmanager" class="form-select">
         <option value="">Id del manager</option>
 
@@ -43,7 +43,7 @@ foreach ($tiendas as $tienda) {
 
 
    <div class="mb-3">
-     <label for="IDdireccion"> Introduza el id direccion</label>
+     <label class="az" for="IDdireccion"> Introduza el id direccion</label>
      <select name="IDdireccion" id="IDdireccion" class="form-select">
         <option value="">Introducir es el id direccion</option>
 

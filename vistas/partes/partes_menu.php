@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-light bg-primary">
     <a class="navbar-brand text-white container-fluid" href="#">Sakila</a>
 </nav>
@@ -35,5 +34,4 @@
 
 
  ?>
-
 

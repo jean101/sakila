@@ -15,21 +15,21 @@
 <h3 class="as"><?php echo $nombrePagina; ?></h3>
 
 
-<hr>
+<hr class="zz">
 
-<div class="rom">
+<div class="row">
 
 <div class="col-md-5">
 
 <form action="" method="get">
 
 <div class="mb-3">
-<label for="titulo" class="form-label">Nombre de la pelicula</label>
+<label class="aaa" for="titulo" class="form-label">Nombre de la pelicula</label>
 <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Escribe el nombre de la pelicula">
 
 </div>
 
-<select name="descripcion" id="descripcion" class="form-select">
+<select name="descripcion"  id="descripcion" class="form-select">
         <option value="">Aqui va el listado de las descripciones de las peliculas</option>
      </select>
 
@@ -53,14 +53,14 @@
 </div> 
 
 <div class="mb-3">
-<label for="arrendamiento" class="form-label">tasa de arrendamiento</label>
+<label class="www" for="arrendamiento" class="form-label">tasa de arrendamiento</label>
 <input type="text" name="arrendamiento" class="form-control" id="titulo" placeholder="Escribe la tasa de arrendamiento">
 
 
 </div>
 
 <div class="mb-3">
-<label for="longitud" class="form-label">longitud de la pelicula</label>
+<label class="qqq" for="longitud" class="form-label">longitud de la pelicula</label>
 <input type="text" name="longitud" class="form-control" id="titulo" placeholder="Longitud de la pelicula">
 
 

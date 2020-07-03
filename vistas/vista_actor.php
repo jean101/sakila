@@ -16,7 +16,7 @@
 <div class="col-md-10">
 <h3 class="jean"><?php echo $nombrePagina; ?></h3>
 
-<hr>
+<hr class="dd">
 
 <div class="row">
 
@@ -24,15 +24,15 @@
 <form action="" method="get">
 
 <div class="mb-3">
-<label for="nombreActor" class="form-label">Nombre del actor</label>
-<input type="text" name="nombreActor" class="form-control" id="nombre" placeholder="Escribe el nombre del actor ">
+<label class="fdd" for="nombreActor" class="form-label">Nombre del actor</label>
+<input type="text" name="nombreActor" class="form-control" id="nombreActor" placeholder="Escribe el nombre del actor">
 
 </div>
 
 
 <div class="mb-3">
-<label for="apellidoActor" class="form-label">Apellido del actor</label>
-<input type="text" name="apellidoActor" class="form-control" id="apellidoActor" placeholder="Escribe el apellido del actor ">
+<label class="zzz" for="apellidoActor" class="form-label">Apellido del actor</label>
+<input type="text" name="apellidoActor" class="form-control" id="apellidoActor" placeholder="Escribe el apellido del actor">
 
 </div>
 

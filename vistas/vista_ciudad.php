@@ -15,7 +15,7 @@
 <div class="col-md-10">
 <h3 class="ht"><?php echo $nombrePagina; ?></h3>
 
-<hr>
+<hr class="qq">
 
 <div class="row">
 
@@ -24,7 +24,7 @@
 <form action=""method="get">
 
 <div class="mb-3">
-     <label for="ciudad"> ciudad</label>
+     <label class="rf" for="ciudad"> ciudad</label>
      <select name="ciudad" id="ciudad" class="form-select">
         <option value="">Nombre de la ciudad</option>
         
@@ -32,7 +32,7 @@
    </div>
 
    <div class="mb-3">
-     <label for="IDciudad"> ciudad</label>
+     <label class="ws" for="IDciudad"> ciudad</label>
      <select name="idciudad" id="IDciudad" class="form-select">
         <option value="">Aqui va el id de la ciudad</option>
 
