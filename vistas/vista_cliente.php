@@ -23,9 +23,9 @@
 
 <form action="" method="get">
 <div class="mb-3">
-     <label class="cx" for="IDtienda"> ciudad</label>
+     <label class="cx" for="IDtienda"> seleccione el id tienda</label>
      <select name="tienda" id="IDtienda" class="form-select">
-        <option value="">Introducir el id tienda</option>
+        <option value=""> seleccione el id tienda</option>
 
         <?php
 
@@ -57,15 +57,15 @@
    </div>
 
    <div class="mb-3">
-     <label class="qwe" for="IDdireccion"> Id direccion</label>
+     <label class="qwe" for="IDdireccion">  direccion</label>
      <select name="direccion" id="IDdireccion" class="form-select">
-        <option value="">Introducir el id direccion</option>
+        <option value=""> direccion</option>
 
         <?php
 
          foreach ($clientes as $cliente) {
 
-             echo "  <option value=\"{$cliente["address_id"]}\">{$cliente["address_id"]}</option>";
+             echo "  <option value=\"{$cliente["address"]}\">{$cliente["address"]}</option>";
          }
          ?>
      </select>

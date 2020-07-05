@@ -27,15 +27,15 @@
 <form action=""method="get">
 
 <div class="mb-3">
-     <label class="rf" for="IDmanager"> id del manager</label>
+     <label class="rf" for="IDmanager"> Direccion de la tienda</label>
      <select name="IDmanager" id="IDmanager" class="form-select">
-        <option value="">Id del manager</option>
+        <option value="">Direccion de la tienda</option>
 
         <?php
 
 foreach ($tiendas as $tienda) {
 
-    echo "  <option value=\"{$tienda["manager_staff_id"]}\">{$tienda["manager_staff_id"]}</option>";
+    echo "  <option value=\"{$tienda["store"]}\">{$tienda["store"]}</option>";
 }
 ?>
      </select>
@@ -43,15 +43,15 @@ foreach ($tiendas as $tienda) {
 
 
    <div class="mb-3">
-     <label class="az" for="IDdireccion"> Introduza el id direccion</label>
+     <label class="az" for="IDdireccion"> Nombre del manager</label>
      <select name="IDdireccion" id="IDdireccion" class="form-select">
-        <option value="">Introducir es el id direccion</option>
+        <option value="">Nombre del manager</option>
 
         <?php
 
 foreach ($tiendas as $tienda) {
 
-    echo "  <option value=\"{$tienda["address_id"]}\">{$tienda["address_id"]}</option>";
+    echo "  <option value=\"{$tienda["manager"]}\">{$tienda["manager"]}</option>";
 }
 ?>
      </select>

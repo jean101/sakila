@@ -1,17 +1,17 @@
 <?php
 
 $nombrePagina = "pelicula";
+require_once "modelos/modelo_peliculas.php";
 
+$peliculas = obtenerPeliculas($conexion);
 $titulo = $_GET["titulo"] ?? "";
-$descripcion = $_GET["descripcion"] ?? "";
 $lanzamiento = $_GET["lanzamiento"] ?? "";
-$lenguaje = $_GET["lenguaje"] ?? "";
+$descripcion = $_GET["Descripcion"] ?? "";
 $duracion = $_GET["duracion"] ?? "";
 $arrendamiento = $_GET["arrendamiento"] ?? "";
-$longitud = $_GET["longitud"] ?? "";
 $costo = $_GET["costo"] ?? "";
 $rating = $_GET["rating"] ?? "";
-$caracteristicas = $_GET["caracteristicas"] ?? "";
+$actores = $_GET["actores"] ?? "";
 
 if (isset($_GET["guardar descripcion"])) {
     

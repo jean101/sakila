@@ -26,17 +26,11 @@ include_once "partes/partes_head.php";
 <form action="" method="get">
 
 <div class="mb-3">
-     <label for="pais" class="qw">pais</label>
-     <select name="pais" id="pais" class="form-select">
-        <option value="">Aqui va el listado de los paises</option>
+<label class="qw" for="pais" class="form-label">Digite el nombre de su pais</label>
+<input type="text" name="pais" class="form-control" id="pais" placeholder="Digite el nombre de su pais">
 
-        <?php
-
-foreach ($paises as $pais) {
-
-    echo "  <option value=\"{$pais["country"]}\">{$pais["country"]}</option>";
-}
-?>
+</div>
+       
 </form>
 
 </div>

@@ -36,9 +36,17 @@
    </div>
 
    <div class="mb-3">
-     <label class="jhl" for="IDdireccion"> Id direccion</label>
-     <select name="direccion" id="IDdireccion" class="form-select">
-        <option value="">Introducir el id direccion</option>
+     <label class="jhl" for="ciudad"> ciudad</label>
+     <select name="ciudad" id="ciudad" class="form-select">
+        <option value="">ciudad</option>
+
+        <?php
+
+foreach ($personales as $personal) {
+
+    echo "  <option value=\"{$personal["city"]}\">{$personal["city"]}</option>";
+}
+?>
      </select>
    </div>
 
@@ -55,9 +63,17 @@
    </div>
 
    <div class="mb-3">
-     <label class="iou" for="IDtienda"> Introduza el id de tienda</label>
+     <label class="iou" for="IDtienda"> Direccion  de la  tienda</label>
      <select name="tienda" id="IDtienda" class="form-select">
-        <option value="">Introducir el id de tienda</option>
+        <option value="">Direccion de la   tienda</option>
+
+        <?php
+
+foreach ($personales as $personal) {
+
+    echo "  <option value=\"{$personal["address"]}\">{$personal["address"]}</option>";
+}
+?>
      </select>
    </div>
 

@@ -3,13 +3,16 @@
 $nombrePagina = "ciudad";
 
 
+require_once "modelos/modelo_pais.php";
+
+$paises = obtenerPaises($conexion);
 
 $ciudad = $_GET["ciudad"] ?? "";
-$idPais = $_GET["idPais"] ?? "";
+$Pais = $_GET["Pais"] ?? "";
 
-if (isset($_GET["guardar datos"])) {
+if (isset($_GET["guardar "])) {
     
-    echo "guardar ciudad...";
+    echo "guardar ...";
     
 }
 

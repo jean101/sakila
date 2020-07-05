@@ -24,31 +24,39 @@
 <form action="" method="get">
 
 <div class="mb-3">
-<label class="aaa" for="titulo" class="form-label">Nombre de la pelicula</label>
-<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Escribe el nombre de la pelicula">
+<label class="aaa" for="titulo" class="form-label">Titulo</label>
+<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Escribe el titulo">
 
 </div>
 
-<select name="descripcion"  id="descripcion" class="form-select">
-        <option value="">Aqui va el listado de las descripciones de las peliculas</option>
-     </select>
+<div class="mb-3">
+<label class="" for="Descripcion" class="form-label">Descripcion</label>
+<input type="text" name="Descripcion" class="form-control" id="Descripcion" placeholder="Descripcion">
+
+</div>
+
+<div class="mb-3">
+<label class="" for="lanzamiento" class="form-label">Lanzamiento</label>
+<input type="text" name="lanzamiento" class="form-control" id="lanzamiento" placeholder="Lanzamiento">
+
+</div>
+
 
 
 </form>
 <br>
+
 <div class="mb-3">
-<select name="lanzamiento" id="lanzamiento" class="form-select">
-        <option value="">Aqui va la fechas de lanzamiento las peliculas</option>
-     </select>
-<br>
-     <div class="mb-3">
-<select name="lenguaje" id="lenguaje" class="form-select">
-        <option value="">Aqui va el lenguaje de las peliculas</option>
-     </select>
-<br>
-<div class="mb-3">
-<select name="duracion" id="duracion" class="form-select">
-        <option value="">Aqui va la duracion de  las peliculas</option>
+<select name="idioma" id="idioma" class="form-select">
+        <option value="">seleccione un idioma</option>
+
+        <?php
+
+         foreach ($peliculas as $pelicula) {
+
+             echo "  <option value=\"{$pelicula[""]}\">{$pelicula["length"]}</option>";
+         }
+         ?>
      </select>
 </div> 
 
@@ -60,26 +68,43 @@
 </div>
 
 <div class="mb-3">
-<label class="qqq" for="longitud" class="form-label">longitud de la pelicula</label>
-<input type="text" name="longitud" class="form-control" id="titulo" placeholder="Longitud de la pelicula">
-
-
-</div>
-<div class="mb-3">
 <select name="costo" id="costo" class="form-select">
-        <option value="">costo de remplazo  de  las peliculas</option>
+        <option value="">costo  de  las peliculas</option>
+
+        <?php
+
+foreach ($peliculas as $pelicula) {
+
+    echo "  <option value=\"{$pelicula["price"]}\">{$pelicula["price"]}</option>";
+}
+?>
      </select>
 </div> 
 
 <div class="mb-3">
 <select name="rating" id="rating" class="form-select">
         <option value="">rating  de las peliculas</option>
+
+        <?php
+
+foreach ($peliculas as $pelicula) {
+
+    echo "  <option value=\"{$pelicula["rating"]}\">{$pelicula["rating"]}</option>";
+}
+?>
      </select>
 </div> 
 
 <div class="mb-3">
-<select name="caracteristicas" id="caracteristicas" class="form-select">
-        <option value="">caracteristicas especiales de las peliculas</option>
+<select name="actores" id="actores" class="form-select">
+        <option value="">actores de las peliculas</option>
+        <?php
+
+foreach ($peliculas as $pelicula) {
+
+    echo "  <option value=\"{$pelicula["actors"]}\">{$pelicula["actors"]}</option>";
+}
+?>
      </select>
 </div> 
 

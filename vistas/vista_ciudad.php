@@ -24,24 +24,30 @@
 <form action=""method="get">
 
 <div class="mb-3">
-     <label class="rf" for="ciudad"> ciudad</label>
-     <select name="ciudad" id="ciudad" class="form-select">
-        <option value="">Nombre de la ciudad</option>
-        
+<label class="rf" for="ciudad" class="form-label">Digite la ciudad</label>
+<input type="text" name="ciudad" class="form-control" id="ciudad" placeholder="Escribe la ciudad">
+
+
+</div>
+   <div class="mb-3">
+     <label class="ws" for="pais"> pais</label>
+     <select name="pais" id="pais" class="form-select">
+        <option value=""> Elija el pais</option>
+
+        <?php
+
+         foreach ($paises as $pais) {
+
+             echo "  <option value=\"{$pais["country"]}\">{$pais["country"]}</option>";
+         }
+         ?>
+
      </select>
    </div>
 
    <div class="mb-3">
-     <label class="ws" for="IDciudad"> ciudad</label>
-     <select name="idciudad" id="IDciudad" class="form-select">
-        <option value="">Aqui va el id de la ciudad</option>
 
-     </select>
-   </div>
-
-   <div class="mb-3">
-
-   <button type="submit" name="guardar ciudad" class="btn btn-success">guardar datos</button>
+   <button type="submit" name="guardar " class="btn btn-success">guardar datos</button>
 
    </div>
 

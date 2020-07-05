@@ -1,11 +1,13 @@
 <?php
 
 $nombrePagina = "personal";
+require_once "modelos/modelo_personal.php";
 
+$personales = obtenerPersonales($conexion);
 
 $nombre = $_GET["nombre"] ?? "";
 $nombre2 = $_GET["nombre2"] ?? "";
-$IDdireccion = $_GET["IDdireccion"] ?? "";
+$IDdireccion = $_GET["ciudad"] ?? "";
 $foto = $_GET["foto"] ?? "";
 $email = $_GET["IDtienda"] ?? "";
 $activo = $_GET["activo"] ?? "";

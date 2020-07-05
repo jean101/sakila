@@ -3,7 +3,7 @@
 
 $nombrePagina = "Direccion";
 
-require_once "modelos/modelo_ciudad.php";
+require_once "modelos/modelo_ciudades.php";
 
 
 $ciudades = obtenerCiudades($conexion);
