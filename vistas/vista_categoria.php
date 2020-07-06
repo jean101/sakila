@@ -26,10 +26,11 @@
             <form action="" method="get">
             
             <div class="mb-3">
-<select name="nombre" id="nombre" class="form-select">
-        <option value="">Nombre de las categorias</option>
-     </select>
-</div> 
+<label class="asa" for="nombre" class="form-label">nombre de la categoria</label>
+<input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escribe el nombre de la categoria">
+
+
+</div>
 
 <div class="mb-3">
 <button type="submit" name="Enviar categoria" class="btn btn-success">Enviar categoria</button>
@@ -40,6 +41,38 @@
             </form>
             
             </div>
+            <hr class="xv">
+
+            <div class="col-md-12">
+<div class="row">
+<table  class="table">
+<thead>
+     <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+</thead>
+<tbody>
+
+
+    <?php
+foreach ($categorias as $categoria){
+
+    echo "<tr>
+            <th scope=\"row\">{$categoria["category_id"]}</th>
+            <td>{$categoria["name"]}</td>
+         </tr>";
+
+}
+
+    ?>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+
             </div>
 
 </body>

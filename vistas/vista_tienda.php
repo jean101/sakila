@@ -24,6 +24,48 @@
 <div class="row">
 
 <div class="col-md-5">
+
+<div class="row">
+
+<hr>
+
+<div class="row">
+
+<div class="col-md-12">
+
+
+<table class="table">
+
+<thead>
+
+<th>ID de la tienda </th>
+<th>Gerente de la tienda</th>
+<th>Direccion de la tienda</th>
+
+</thead>
+
+<tbody>
+<?php 
+
+foreach ($InformacionTiendas as $InformacionTienda) {
+
+  echo  "<tr>
+            <td>{$InformacionTienda["store_id"]}</td>
+            <td>{$InformacionTienda["first_name"]}</td>
+            <td>{$InformacionTienda["address"]}</td>
+        
+        </tr>";
+}
+?>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+</div>
 <form action=""method="get">
 
 <div class="mb-3">

@@ -41,6 +41,37 @@ include_once "partes/partes_head.php";
 
 
 </div>
+<hr class="jmm">
+
+
+<div class="col-md-12">
+<div class="row">
+<table  class="table">
+<thead>
+     <th scope="col">country_id</th>
+      <th scope="col">Country</th>
+</thead>
+<tbody>
+
+
+    <?php
+foreach ($paises as $pais){
+
+    echo "<tr>
+            <th scope=\"row\">{$pais["country_id"]}</th>
+            <td>{$pais["country"]}</td>
+         </tr>";
+
+}
+
+    ?>
+
+
+</tbody>
+
+</table>
+
+</div>
 
 </div>
 </body>

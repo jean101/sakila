@@ -47,6 +47,37 @@
 </div>
 </form>
 </div>
+
+<hr class="byb">
+
+<div class="col-md-12">
+<div class="row">
+<table  class="table">
+<thead>
+     <th scope="col">language_id</th>
+      <th scope="col">Nombre</th>
+</thead>
+<tbody>
+
+
+    <?php
+foreach ($idiomas as $idioma){
+
+    echo "<tr>
+            <th scope=\"row\">{$idioma["language_id"]}</th>
+            <td>{$idioma["name"]}</td>
+         </tr>";
+
+}
+
+    ?>
+
+
+</tbody>
+
+</table>
+
+</div>
 </div>
 
 </body>
