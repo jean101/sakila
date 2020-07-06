@@ -47,7 +47,7 @@
 <tbody>
 <?php 
 
-foreach ($InformacionTiendas as $InformacionTienda) {
+foreach ($informacionTiendas as $InformacionTienda) {
 
   echo  "<tr>
             <td>{$InformacionTienda["store_id"]}</td>
