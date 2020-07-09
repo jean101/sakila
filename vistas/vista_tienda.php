@@ -8,8 +8,9 @@
 <div class="row">
 <div class="col-md-2">
 <?php
-    include "partes/partes_menu.php";
     include "partes/partes_head.php";
+
+    include "partes/partes_menu.php";
 
 ?>
 </div>
@@ -20,43 +21,62 @@
 <hr class="rr">
 
 
-
 <div class="row">
 
-<div class="col-md-5">
+<div class="col-md-3">
 
-<div class="row">
+<form action=""method="get">
 
-<hr>
+<div class="mb-3">
+     <label class="ssss" for="direccion"> Direccion de la tienda</label>
+     <select name="direccion" id="direccion" class="form-select">
+        <option value="">Direccion de la tienda</option>
 
-<div class="row">
-
-<div class="col-md-12">
-
-
-<table class="table">
-
-<thead>
-
-<th>ID de la tienda </th>
-<th>Gerente de la tienda</th>
-<th>Direccion de la tienda</th>
-
-</thead>
-
-<tbody>
-<?php 
-
-foreach ($informacionTiendas as $InformacionTienda) {
-
-  echo  "<tr>
-            <td>{$InformacionTienda["store_id"]}</td>
-            <td>{$InformacionTienda["first_name"]}</td>
-            <td>{$InformacionTienda["address"]}</td>
         
-        </tr>";
+     </select>
+   </div>
+
+   <div class="mb-3">
+     <label class="sss" for="manager"> manager de la tienda</label>
+     <select name="manager" id="manager" class="form-select">
+        <option value="">manager de la tienda</option>
+
+
+        <?php
+
+foreach ($gerentes as gerente) {
+
+  echo "<option value=\"{$gerente["first_name"]}\">{$gerente["last_name"]}</option>";
+
 }
+
 ?>
+     </select>
+   </div>
+
+
+   <div class="col-md-12">
+<div class="row">
+<table  class="table">
+<thead>
+     <th scope="col">country_id</th>
+      <th scope="col">Country</th>
+</thead>
+<tbody>
+
+
+    <?php
+foreach ($direcciones as $direccion){
+
+    echo "<tr>
+            <th scope=\"row\">{$direccion["address_id"]}</th>
+            <td>{$direccion["address_id"]}</td>
+         </tr>";
+
+}
+
+    ?>
+
 
 </tbody>
 
@@ -64,46 +84,10 @@ foreach ($informacionTiendas as $InformacionTienda) {
 
 </div>
 
-</div>
-</div>
-<form action=""method="get">
-
-<div class="mb-3">
-     <label class="rf" for="IDmanager"> Direccion de la tienda</label>
-     <select name="IDmanager" id="IDmanager" class="form-select">
-        <option value="">Direccion de la tienda</option>
-
-        <?php
-
-foreach ($tiendas as $tienda) {
-
-    echo "  <option value=\"{$tienda["store"]}\">{$tienda["store"]}</option>";
-}
-?>
-     </select>
-   </div>
-
-
-   <div class="mb-3">
-     <label class="az" for="IDdireccion"> Nombre del manager</label>
-     <select name="IDdireccion" id="IDdireccion" class="form-select">
-        <option value="">Nombre del manager</option>
-
-        <?php
-
-foreach ($tiendas as $tienda) {
-
-    echo "  <option value=\"{$tienda["manager"]}\">{$tienda["manager"]}</option>";
-}
-?>
-     </select>
-   </div>
-   <div class="mb-3">
-<button type="submit" name="guardar informacion" class="btn btn-success">guardar informacion</button>
-
 
 
 </form>
-
 </div>
+
+
 </div>

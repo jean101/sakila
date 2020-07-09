@@ -3,12 +3,19 @@
 $nombrePagina = "tienda";
  
 require_once "modelos/modelo_tienda.php";
-
-$tiendas = obtenerTiendas($conexion);
+require_once "modelos/modelo_direccion.php";
+require_once "modelos/modelo_gerente.php";
+require_once "funciones/ayudante.php";
+$direcciones = obtenerDirecciones($conexion);
+$gerentes = obtenerGerentes($conexion);
+$infoTiendas = obtenerInformacionTienda($conexion);
 
 $informacionTiendas = obtenerInformacionTienda($conexion);
-$IDmanager = "IDmanager";
-$IDdireccion = $_GET["IDdireccion"] ?? "";
+
+$manager = $_GET["manager"] ?? "";
+$direccion = $_GET["direccion"] ?? "";
+
+
 
 if (isset ($_GET["guardar informacion"])) {
 

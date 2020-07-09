@@ -5,8 +5,9 @@
 <div class="row">
 <div class="col-md-2">
 <?php
-    include "partes/partes_menu.php";
     include "partes/partes_head.php";
+
+    include "partes/partes_menu.php";
 
 ?>
 </div>
