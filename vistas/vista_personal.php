@@ -37,26 +37,27 @@
    </div>
 
    <div class="mb-3">
-     <label class="jhl" for="ciudad"> ciudad</label>
-     <select name="ciudad" id="ciudad" class="form-select">
-        <option value="">ciudad</option>
+     <label class="jhl" for="Direciion"> Direccion</label>
+     <select name="Direccion" id="Direccion" class="form-select">
+        <option value="">Direccion</option>
 
         <?php
 
-foreach ($personales as $personal) {
+foreach ($direcciones as $direccion) {
 
-    echo "  <option value=\"{$personal["city"]}\">{$personal["city"]}</option>";
+    echo "  <option value=\"{$direccion["address_id"]}\">{$direccion["address"]}</option>";
 }
 ?>
      </select>
    </div>
 
-   <div class="mb-3">
-     <label class="dfg" for="foto"> Introduza una foto</label>
-     <select name="foto" id="foto" class="form-select">
-        <option value="">Introducir una foto</option>
-     </select>
-   </div>
+    <div class="form-file">
+        <input type="file" class="form-file-input" id="customFile">
+        <label class="form-file-label" for="customFile">
+            <span class="form-file-text">Elegir imagen...</span>
+            <span class="form-file-button">imagen</span>
+        </label>
+    </div>
 
    <div class="mb-3">
      <label class="yut" for="email">Introduzca su email</label>
@@ -64,24 +65,26 @@ foreach ($personales as $personal) {
    </div>
 
    <div class="mb-3">
-     <label class="iou" for="IDtienda"> Direccion  de la  tienda</label>
-     <select name="tienda" id="IDtienda" class="form-select">
-        <option value="">Direccion de la   tienda</option>
+     <label class="iou" for="tienda">   tienda</label>
+     <select name="tienda" id="tienda" class="form-select">
+        <option value="">  tienda</option>
 
         <?php
 
-foreach ($personales as $personal) {
+foreach ($tiendas as $tienda) {
 
-    echo "  <option value=\"{$personal["address"]}\">{$personal["address"]}</option>";
+    echo "  <option value=\"{$tienda["store_id"]}\">{$tienda["store_id"]}</option>";
 }
 ?>
      </select>
    </div>
 
-   <div class="mb-3">
-     <label for="activo">Introduzca el activo</label>
-     <input type="text" name="activo" id="activo" class="form-control">
-   </div>
+    <div class="qazx" class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            Activo
+        </label>
+    </div>
 
    <div class="mb-3">
      <label class="red" for="username">Nombre que utiliza el usuario</label>

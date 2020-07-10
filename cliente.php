@@ -2,9 +2,11 @@
 
 $nombrePagina = "cliente";
 
-require_once "modelos/modelo_cliente.php";
+require_once "modelos/modelo_direccion.php";
+require_once "modelos/modelo_tienda.php";
 
-$clientes = obtenerClientes($conexion);
+$direcciones = obtenerDirecciones($conexion);
+$tiendas = obtenerTiendas($conexion);
 
 $nombre = $_GET["nombre"] ?? "";
 $nombre2 = $_GET["nombre2"] ?? "";

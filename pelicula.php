@@ -1,9 +1,10 @@
 <?php
 
 $nombrePagina = "pelicula";
-require_once "modelos/modelo_peliculas.php";
+require_once "modelos/modelo_idioma.php";
 
-$peliculas = obtenerPeliculas($conexion);
+$idiomas = obtenerIdiomas($conexion);
+
 $titulo = $_GET["titulo"] ?? "";
 $lanzamiento = $_GET["lanzamiento"] ?? "";
 $descripcion = $_GET["Descripcion"] ?? "";

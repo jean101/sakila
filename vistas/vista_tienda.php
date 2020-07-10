@@ -30,23 +30,31 @@
 <div class="mb-3">
      <label class="ssss" for="direccion"> Direccion de la tienda</label>
      <select name="direccion" id="direccion" class="form-select">
-        <option value="">Direccion de la tienda</option>
+        <option value=""selected="true" disabled="disabled" >Direccion de la tienda</option>
 
-        
+        <?php
+
+foreach ($direcciones as $direccion) {
+
+  echo "<option value=\"{$direccion["address_id"]}\">{$direccion["address"]} </option>";
+
+}
+
+?>
      </select>
    </div>
 
    <div class="mb-3">
      <label class="sss" for="manager"> manager de la tienda</label>
      <select name="manager" id="manager" class="form-select">
-        <option value="">manager de la tienda</option>
+        <option value="" selected="true" disabled="disabled">manager de la tienda</option>
 
 
         <?php
 
-foreach ($gerentes as gerente) {
+foreach ($gerentes as $gerente) {
 
-  echo "<option value=\"{$gerente["first_name"]}\">{$gerente["last_name"]}</option>";
+  echo "<option value=\"{$gerente["staff_id"]}\">{$gerente["first_name"]} {$gerente["last_name"]}</option>";
 
 }
 

@@ -1,20 +1,22 @@
 <?php
 
 $nombrePagina = "personal";
-require_once "modelos/modelo_personal.php";
+require_once "modelos/modelo_direccion.php";
+require_once "modelos/modelo_tienda.php";
 
-$personales = obtenerPersonales($conexion);
 
 $nombre = $_GET["nombre"] ?? "";
 $nombre2 = $_GET["nombre2"] ?? "";
-$IDdireccion = $_GET["ciudad"] ?? "";
+$direccion = $_GET["direccion"] ?? "";
 $foto = $_GET["foto"] ?? "";
-$email = $_GET["IDtienda"] ?? "";
+$email = $_GET["email"] ?? "";
+$tienda = $_GET["tienda"] ?? "";
 $activo = $_GET["activo"] ?? "";
 $username = $_GET["username"] ?? "";
 $password = $_GET["password"] ?? "";
 
-
+$direcciones = obtenerDirecciones($conexion);
+$tiendas = obtenerTiendas($conexion);
 if (isset ($_GET["Enviar informacion"])) {
 
 }

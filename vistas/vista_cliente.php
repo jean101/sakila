@@ -30,9 +30,9 @@
 
         <?php
 
-         foreach ($clientes as $cliente) {
+         foreach ($tiendas as $tienda) {
 
-             echo "  <option value=\"{$cliente["store_id"]}\">{$cliente["store_id"]}</option>";
+             echo "  <option value=\"{$tienda["store_id"]}\">{$tienda["store_id"]}</option>";
          }
          ?>
 
@@ -64,26 +64,32 @@
 
         <?php
 
-         foreach ($clientes as $cliente) {
+         foreach ($direcciones as $direccion) {
 
-             echo "  <option value=\"{$cliente["address"]}\">{$cliente["address"]}</option>";
+             echo "  <option value=\"{$direccion["address_id"]}\">{$direccion["address"]}</option>";
          }
          ?>
      </select>
-   </div>
 
-   <div class="mb-3">
-     <label class="hgf" for="activo">Introduzca el activo</label>
-     <input type="text" name="activo" id="activo" class="form-control">
-   </div>
+     <div class="mt-5">
+     
+    
+     <div class="qazx" class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Activo
+  </label>
+</div>
 
-   </div>
-
-<div class="mb-3">
+<div class="mt-3">
 <input type="button" class="btn btn-success" value="Enviar informacion">
 
 
 </div>
+     
+     
+     </div>
+     
 
 
 </form>

@@ -49,65 +49,78 @@
 
 <div class="mb-3">
 <select name="idioma" id="idioma" class="form-select">
-        <option value="">seleccione un idioma</option>
+        <option value="">seleccione el  idioma original</option>
 
         <?php
 
-         foreach ($peliculas as $pelicula) {
+         foreach ($idiomas as $idioma) {
 
-             echo "  <option value=\"{$pelicula[""]}\">{$pelicula["length"]}</option>";
+             echo "  <option value=\"{$idioma["language_id"]}\">{$idioma["name"]}</option>";
          }
          ?>
      </select>
-</div> 
+</div>
 
-<div class="mb-3">
-<label class="www" for="arrendamiento" class="form-label">tasa de arrendamiento</label>
-<input type="text" name="arrendamiento" class="form-control" id="titulo" placeholder="Escribe la tasa de arrendamiento">
+    <div class="mb-3">
+        <label class="" for="idioma1">   selecciona el idioma secundario</label>
+        <select name="idioma1" id="idioma" class="form-select">
+            <option value="">  selecciona el idioma secundario</option>
+            <?php
+
+            foreach ($idiomas as $idioma) {
+
+                echo "  <option value=\"{$idioma["language_id"]}\">{$idioma["name"]}</option>";
+            }
+            ?>
+
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="" for="duracion" class="form-label">duracion de renta</label>
+        <input type="text" name="duracion" class="form-control" id="duracion" placeholder="duracion">
+
+    </div>
+
+    <div class="mb-3">
+        <label class="" for="arrendamiento" class="form-label">tasa de arrendamiento</label>
+        <input type="text" name="arrendamiento" class="form-control" id="arrendamiento" placeholder="arrendamiento">
+
+    </div>
+
+    <div class="mb-3">
+        <label class="" for="tamaño" class="form-label">tamaño</label>
+        <input type="text" name="tamaño" class="form-control" id="tamaño" placeholder="tamaño">
+
+    </div>
+
+    <div class="mb-3">
+        <label class="" for="remplazo" class="form-label">costo de reemplazo</label>
+        <input type="text" name="remplazo" class="form-control" id="remplazo" placeholder="remplazo">
+
+    </div>
+
+    <div class="mb-3">
+        <label class="" for="clasificacion" class="form-label">clasificacion</label>
+        <input type="text" name="clasificacion" class="form-control" id="clasificacion" placeholder="clasificacion">
+
+    </div>
+
+    <div class="mb-3">
+        <label class="" for="caracteristicas" class="form-label">caracteristicas especiales</label>
+        <input type="text" name="caracteristicas" class="form-control" id="caracteristicas" placeholder="caracteristicas">
+
+    </div>
+
+
+
+
 
 
 </div>
 
-<div class="mb-3">
-<select name="costo" id="costo" class="form-select">
-        <option value="">costo  de  las peliculas</option>
 
-        <?php
 
-foreach ($peliculas as $pelicula) {
 
-    echo "  <option value=\"{$pelicula["price"]}\">{$pelicula["price"]}</option>";
-}
-?>
-     </select>
-</div> 
-
-<div class="mb-3">
-<select name="rating" id="rating" class="form-select">
-        <option value="">rating  de las peliculas</option>
-
-        <?php
-
-foreach ($peliculas as $pelicula) {
-
-    echo "  <option value=\"{$pelicula["rating"]}\">{$pelicula["rating"]}</option>";
-}
-?>
-     </select>
-</div> 
-
-<div class="mb-3">
-<select name="actores" id="actores" class="form-select">
-        <option value="">actores de las peliculas</option>
-        <?php
-
-foreach ($peliculas as $pelicula) {
-
-    echo "  <option value=\"{$pelicula["actors"]}\">{$pelicula["actors"]}</option>";
-}
-?>
-     </select>
-</div> 
 
 <div class="mb-3">
 <button type="submit" name="guardar descripcion" class="btn btn-success">Guardar descripcion</button>
