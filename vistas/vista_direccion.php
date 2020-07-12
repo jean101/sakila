@@ -91,8 +91,53 @@
 </form>
 </div>
 
-</div>
+    <hr class="ya">
+    <div class="col-md-12">
+        <div class="row">
+            <table  class="table">
+                <thead>
+                <th scope="col">address_id</th>
+                <th scope="col">address</th>
+                <th scope="col">address2</th>
+                <th scope="col">district</th>
+                <th scope="col">city_id</th>
+                <th scope="col">postal_code</th>
+                <th scope="col">phone</th>
+                <th scope="col">location</th>
 
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>28 Mysql Boulevard</td>
+                    <td>jose</td>
+                </tr>
+
+                <?php
+                foreach ($direcciones as $direccion){
+
+                    echo "<tr>
+            <th scope=\"row\">{$direccion["address_id"]}</th>
+            <td>{$direccion["address"]}</td>
+            <td>{$direccion["address2"]}</td>
+            <td>{$direccion["district"]}</td>
+            <td>{$direccion["city_id"]}</td>
+            <td>{$direccion["postal_code"]}</td>
+            <td>{$direccion["phone"]}</td>
+            <td>{$direccion["location"]}</td>
+
+         </tr>";
+
+                }
+
+                ?>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
 
 
 </body>

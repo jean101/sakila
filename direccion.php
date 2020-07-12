@@ -4,10 +4,11 @@
 $nombrePagina = "Direccion";
 
 require_once "modelos/modelo_ciudades.php";
+require_once "modelos/modelo_direccion.php";
 
+$direcciones = obtenerDirecciones($conexion);
 
 $ciudades = obtenerCiudades($conexion);
-
 
 $direccion = $_GET["direccion"] ?? "";
 $direccion2 = $_GET["direccion2"] ?? "";

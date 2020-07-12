@@ -31,13 +31,13 @@
 </div>
 
 <div class="mb-3">
-<label class="" for="Descripcion" class="form-label">Descripcion</label>
+<label class="jjj" for="Descripcion" class="form-label">Descripcion</label>
 <input type="text" name="Descripcion" class="form-control" id="Descripcion" placeholder="Descripcion">
 
 </div>
 
 <div class="mb-3">
-<label class="" for="lanzamiento" class="form-label">Lanzamiento</label>
+<label class="qdfg" for="lanzamiento" class="form-label">Lanzamiento</label>
 <input type="text" name="lanzamiento" class="form-control" id="lanzamiento" placeholder="Lanzamiento">
 
 </div>
@@ -62,7 +62,7 @@
 </div>
 
     <div class="mb-3">
-        <label class="" for="idioma1">   selecciona el idioma secundario</label>
+        <label class="jjkkl" for="idioma1">   selecciona el idioma secundario</label>
         <select name="idioma1" id="idioma" class="form-select">
             <option value="">  selecciona el idioma secundario</option>
             <?php
@@ -76,37 +76,37 @@
         </select>
     </div>
     <div class="mb-3">
-        <label class="" for="duracion" class="form-label">duracion de renta</label>
+        <label class="gttt" for="duracion" class="form-label">duracion de renta</label>
         <input type="text" name="duracion" class="form-control" id="duracion" placeholder="duracion">
 
     </div>
 
     <div class="mb-3">
-        <label class="" for="arrendamiento" class="form-label">tasa de arrendamiento</label>
+        <label class="grrr" for="arrendamiento" class="form-label">tasa de arrendamiento</label>
         <input type="text" name="arrendamiento" class="form-control" id="arrendamiento" placeholder="arrendamiento">
 
     </div>
 
     <div class="mb-3">
-        <label class="" for="tamaño" class="form-label">tamaño</label>
+        <label class="binn" for="tamaño" class="form-label">tamaño</label>
         <input type="text" name="tamaño" class="form-control" id="tamaño" placeholder="tamaño">
 
     </div>
 
     <div class="mb-3">
-        <label class="" for="remplazo" class="form-label">costo de reemplazo</label>
+        <label class="bang" for="remplazo" class="form-label">costo de reemplazo</label>
         <input type="text" name="remplazo" class="form-control" id="remplazo" placeholder="remplazo">
 
     </div>
 
     <div class="mb-3">
-        <label class="" for="clasificacion" class="form-label">clasificacion</label>
+        <label class="trap" for="clasificacion" class="form-label">clasificacion</label>
         <input type="text" name="clasificacion" class="form-control" id="clasificacion" placeholder="clasificacion">
 
     </div>
 
     <div class="mb-3">
-        <label class="" for="caracteristicas" class="form-label">caracteristicas especiales</label>
+        <label class="traper" for="caracteristicas" class="form-label">caracteristicas especiales</label>
         <input type="text" name="caracteristicas" class="form-control" id="caracteristicas" placeholder="caracteristicas">
 
     </div>
