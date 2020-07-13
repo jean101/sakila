@@ -60,10 +60,10 @@
 
 
     <hr class="ya">
-    <div class="col-md-12">
+    <div class="col-md-9">
         <div class="row">
             <table  class="table">
-                <thead>
+                <thead class="real">
                 <th scope="col">country_id</th>
                 <th scope="col">country</th>
                 <th scope="col">city</th>

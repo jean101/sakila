@@ -13,4 +13,7 @@ $edad = $_GET ["edad"] ?? "";
 $ciudad = $_GET ["ciudad"] ?? "";
 $q = $_GET ["q"] ?? "";
 
+if (isset($_GET["enviar datos"])) {
+
+}
 include_once "vistas/vista_principal.php";

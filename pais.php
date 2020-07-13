@@ -4,10 +4,10 @@ $nombrePagina = "pais";
 require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
+$pais = $_GET["Pais"] ?? "";
 
 $infoPaises = obtenerInfoPaises($conexion);
 
-$pais = $_GET["Pais"] ?? "";
 
 if (isset($_GET["guardar datos"])) {
     

@@ -47,7 +47,7 @@ include_once "partes/partes_head.php";
 <div class="col-md-9">
 <div class="row">
 <table  class="table">
-<thead class="wasab">
+<thead class="real">
      <th scope="col">country_id</th>
       <th scope="col">Country</th>
 </thead>

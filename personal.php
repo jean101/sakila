@@ -3,6 +3,7 @@
 $nombrePagina = "personal";
 require_once "modelos/modelo_direccion.php";
 require_once "modelos/modelo_tienda.php";
+require_once "modelos/modelo_personal.php";
 
 
 $nombre = $_GET["nombre"] ?? "";
@@ -14,7 +15,7 @@ $tienda = $_GET["tienda"] ?? "";
 $activo = $_GET["activo"] ?? "";
 $username = $_GET["username"] ?? "";
 $password = $_GET["password"] ?? "";
-
+$infoPersonales = obtenerInfoPersonales($conexion);
 $direcciones = obtenerDirecciones($conexion);
 $tiendas = obtenerTiendas($conexion);
 if (isset ($_GET["Enviar informacion"])) {

@@ -62,23 +62,38 @@ foreach ($gerentes as $gerente) {
      </select>
    </div>
 
+    <div class="mb-3">
+
+        <button type="submit" name="guardar Informacion" class="btn btn-success">Guardar Informacion</button>
+
+    </div>
+
+    <hr class="ww">
 
    <div class="col-md-12">
 <div class="row">
 <table  class="table">
 <thead>
-     <th scope="col">country_id</th>
-      <th scope="col">Country</th>
+     <th scope="col">store_id</th>
+      <th scope="col">first_name </th>
+
+
+     <th scope="col">address</th>
+
 </thead>
 <tbody>
 
 
     <?php
-foreach ($direcciones as $direccion){
+foreach ($informacionTiendas as $informacionTienda){
 
     echo "<tr>
-            <th scope=\"row\">{$direccion["address_id"]}</th>
-            <td>{$direccion["address_id"]}</td>
+            <th scope=\"row\">{$informacionTienda["store_id"]}</th>
+            <td>{$informacionTienda["first_name" ]} {$informacionTienda["last_name"]}</td>  
+
+            <td>{$informacionTienda["address"]}</td>
+
+
          </tr>";
 
 }

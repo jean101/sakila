@@ -55,11 +55,12 @@ include "partes/partes_menu.php";
 
 </div>
 
-<div class="mb-3">
-<input type="button" class="btn btn-success" value="Enviar datos">
+    <div class="mb-3">
 
+        <button type="submit" name="guardar datos" class="btn btn-success">Guardar Datos</button>
 
-</div>
+    </div>
+
 </form>
 </div>
 

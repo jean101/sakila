@@ -33,11 +33,11 @@
 
 </div>
 </div>
-<div class="mb-3">
-<input type="button" class="btn btn-success" value="guardar lenguaje">
+    <div class="mb-3">
 
+        <button type="submit" name="guardar " class="btn btn-success">Guardar datos</button>
 
-</div>
+    </div>
 </form>
 </div>
 
