@@ -50,21 +50,19 @@
 
 
 <div class="container-fluid">
+
     <hr class="ya">
-    <div class="col-md-12">
+
+    <div class="col-md-9">
         <div class="row">
             <table  class="table">
-                <thead>
+                <thead class="dong">
                 <th scope="col">ID</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">apellido</th>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>jose</td>
-                </tr>
+                
 
                 <?php
                 foreach ($actores as $actor){

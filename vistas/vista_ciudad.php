@@ -66,6 +66,8 @@
                 <thead>
                 <th scope="col">country_id</th>
                 <th scope="col">country</th>
+                <th scope="col">city</th>
+
 
                 </thead>
                 <tbody>
@@ -74,12 +76,10 @@
                 foreach ($infoPaises as $infoPais){
 
                     echo "<tr>
-            <th scope=\"row\">{$infoPais["country_id"]}</th>
+            <th scope=\"row\">{$infoPais["city_id"]}</th>
+            <td>{$infoPais["city"]}</td>
             <td>{$infoPais["country"]}</td>
 
-
-
-            
          </tr>";
 
                 }

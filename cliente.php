@@ -1,12 +1,16 @@
 <?php
 
 $nombrePagina = "cliente";
-
+require_once "funciones/ayudante.php";
 require_once "modelos/modelo_direccion.php";
 require_once "modelos/modelo_tienda.php";
+require_once "modelos/modelo_cliente.php";
 
 $direcciones = obtenerDirecciones($conexion);
 $tiendas = obtenerTiendas($conexion);
+
+$infoClientes = obtenerInfoClientes($conexion);
+
 
 $nombre = $_GET["nombre"] ?? "";
 $nombre2 = $_GET["nombre2"] ?? "";

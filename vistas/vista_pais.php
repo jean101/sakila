@@ -44,10 +44,10 @@ include_once "partes/partes_head.php";
 <hr class="jmm">
 
 
-<div class="col-md-12">
+<div class="col-md-9">
 <div class="row">
 <table  class="table">
-<thead>
+<thead class="wasab">
      <th scope="col">country_id</th>
       <th scope="col">Country</th>
 </thead>

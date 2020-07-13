@@ -66,7 +66,6 @@
 }
 
 body {
-
     background-image: url(https://wallpapersite.com/images/wallpapers/movietime-2560x1440-popcorn-film-4k-8k-374.jpg);
 }
 .rr {
@@ -358,3 +357,22 @@ color: white;
 .traper{
     color: white;
 }
+
+
+.ding{
+    color: black;
+    background-color: wheat;
+}
+
+.dong{
+    background-color: wheat;
+    color: black;
+}
+
+.real{
+    background-color: wheat;
+    color: black;
+}
+
+.wasab{
+    background-color

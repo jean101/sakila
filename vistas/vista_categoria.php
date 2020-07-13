@@ -44,10 +44,10 @@
             </div>
             <hr class="xv">
 
-            <div class="col-md-12">
+            <div class="col-md-9">
 <div class="row">
 <table  class="table">
-<thead>
+<thead class="rari">
      <th scope="col">ID</th>
       <th scope="col">Nombre</th>
 </thead>

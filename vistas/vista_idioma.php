@@ -24,20 +24,12 @@
 <div class="col-md-5">
 <form action="" method="get">
 
-<div class="mb-3">
-     <label class="dc" for="lenguaje"> Identifique su idioma</label>
-     <select name="lenguaje" id="lenguaje" class="form-select">
-        <option value="">Identifique su idioma</option>
+    <div class="mb-3">
+        <label class="rf" for="lenguaje" class="form-label">Digite el idioma</label>
+        <input type="text" name="lenguaje" class="form-control" id="lenguaje" placeholder="Digite el idioma">
 
-        <?php
 
-         foreach ($idiomas as $idioma) {
-
-             echo "  <option value=\"{$idioma["name"]}\">{$idioma["name"]}</option>";
-         }
-         ?>
-     </select>
-   </div>
+    </div>
 
 </div>
 </div>
@@ -51,10 +43,10 @@
 
 <hr class="byb">
 
-<div class="col-md-12">
+<div class="col-md-9">
 <div class="row">
 <table  class="table">
-<thead>
+<thead class="ding">
      <th scope="col">language_id</th>
       <th scope="col">Nombre</th>
 </thead>

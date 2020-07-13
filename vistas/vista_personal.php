@@ -52,11 +52,16 @@ foreach ($direcciones as $direccion) {
    </div>
 
     <div class="form-file">
+
         <input type="file" class="form-file-input" id="customFile">
+
+        
+
         <label class="form-file-label" for="customFile">
-            <span class="form-file-text">Elegir imagen...</span>
-            <span class="form-file-button">imagen</span>
-        </label>
+                <span class="form-file-text">Elegir imagen...</span>
+                <span class="form-file-button">imagen</span>
+
+            </label>
     </div>
 
    <div class="mb-3">

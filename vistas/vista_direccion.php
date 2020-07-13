@@ -92,10 +92,10 @@
 </div>
 
     <hr class="ya">
-    <div class="col-md-12">
+    <div class="col-md-9">
         <div class="row">
             <table  class="table">
-                <thead>
+                <thead class="real">
                 <th scope="col">address_id</th>
                 <th scope="col">address</th>
                 <th scope="col">address2</th>

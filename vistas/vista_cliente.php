@@ -94,7 +94,53 @@
 
 </form>
 </div>
-</div>
+
+
+    <hr class="ya">
+    <div class="col-md-9">
+        <div class="row">
+            <table  class="table">
+                <thead class="real">
+                <th scope="col">customer_id</th>
+                <th scope="col">store_id</th>
+                <th scope="col">first_name</th>
+                <th scope="col">last_name</th>
+                <th scope="col">email</th>
+                <th scope="col">address</th>
+                <th scope="col">active</th>
+
+                </thead>
+                <tbody>
+
+                <?php
+                foreach ($infoClientes as $infoCliente){
+
+                    echo "<tr>
+            <td>{$infoCliente["customer_id"]}</td>
+            <td>{$infoCliente["store_id"]}</td>
+            <td>{$infoCliente["first_name"]}</td>
+            <td>{$infoCliente["last_name"]}</td>
+            <td>{$infoCliente["email"]}</td>
+            <td>{$infoCliente["address"]}</td>
+            <td>{$infoCliente["active"]}</td>
+
+
+         </tr>";
+
+                }
+
+                ?>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+    </div>
 
 </body>
 </html>
