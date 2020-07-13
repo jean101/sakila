@@ -83,7 +83,7 @@
 
    <div class="mb-3">
 
-   <button type="submit" name="guardarDireccion" class="btn btn-success">guardar Direccion</button>
+   <button type="submit" name="guardar" class="btn btn-success">guardar Direccion</button>
 
    </div>
 
@@ -100,31 +100,24 @@
                 <th scope="col">address</th>
                 <th scope="col">address2</th>
                 <th scope="col">district</th>
-                <th scope="col">city_id</th>
+                <th scope="col">city</th>
                 <th scope="col">postal_code</th>
                 <th scope="col">phone</th>
-                <th scope="col">location</th>
 
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>28 Mysql Boulevard</td>
-                    <td>jose</td>
-                </tr>
 
                 <?php
-                foreach ($direcciones as $direccion){
+                foreach ($infoDirecciones as $infoDireccion){
 
                     echo "<tr>
-            <th scope=\"row\">{$direccion["address_id"]}</th>
-            <td>{$direccion["address"]}</td>
-            <td>{$direccion["address2"]}</td>
-            <td>{$direccion["district"]}</td>
-            <td>{$direccion["city_id"]}</td>
-            <td>{$direccion["postal_code"]}</td>
-            <td>{$direccion["phone"]}</td>
-            <td>{$direccion["location"]}</td>
+            <th scope=\"row\">{$infoDireccion["address_id"]}</th>
+            <td>{$infoDireccion["address"]}</td>
+            <td>{$infoDireccion["address2"]}</td>
+            <td>{$infoDireccion["district"]}</td>
+            <td>{$infoDireccion["city"]}</td>
+            <td>{$infoDireccion["postal_code"]}</td>
+            <td>{$infoDireccion["phone"]}</td>
 
          </tr>";
 

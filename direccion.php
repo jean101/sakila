@@ -2,13 +2,13 @@
 
 
 $nombrePagina = "Direccion";
-
-require_once "modelos/modelo_ciudades.php";
 require_once "modelos/modelo_direccion.php";
-
-$direcciones = obtenerDirecciones($conexion);
+require_once "funciones/ayudante.php";
+require_once "modelos/modelo_ciudades.php";
 
 $ciudades = obtenerCiudades($conexion);
+$infoDirecciones = obtenerInfoDirecciones($conexion);
+
 
 $direccion = $_GET["direccion"] ?? "";
 $direccion2 = $_GET["direccion2"] ?? "";

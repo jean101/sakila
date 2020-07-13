@@ -57,6 +57,42 @@
 
 </div>
 
+
+
+    <hr class="ya">
+    <div class="col-md-12">
+        <div class="row">
+            <table  class="table">
+                <thead>
+                <th scope="col">country_id</th>
+                <th scope="col">country</th>
+
+                </thead>
+                <tbody>
+
+                <?php
+                foreach ($infoPaises as $infoPais){
+
+                    echo "<tr>
+            <th scope=\"row\">{$infoPais["country_id"]}</th>
+            <td>{$infoPais["country"]}</td>
+
+
+
+            
+         </tr>";
+
+                }
+
+                ?>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
 </div>
 
 

@@ -2,6 +2,10 @@
 $nombrePagina = "pais";
 
 require_once "modelos/modelo_pais.php";
+require_once "modelos/modelo_ciudades.php";
+
+
+$infoPaises = obtenerInfoPaises($conexion);
 
 $pais = $_GET["Pais"] ?? "";
 
