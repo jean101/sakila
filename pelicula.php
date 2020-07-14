@@ -15,9 +15,8 @@ $rating = $_GET["rating"] ?? "";
 $actores = $_GET["actores"] ?? "";
 
 if (isset($_GET["guardar descripcion"])) {
-    
-    
-    
+
+
 }
 
 include_once "vistas/vista_pelicula.php";

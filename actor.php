@@ -7,9 +7,8 @@ $nombreActor = $_GET["nombreActor"] ?? "";
 $apellidoActor = $_GET["apellidoActor"] ?? "";
 
 if (isset($_GET["guardar actor"])) {
-    
-    
-    
+
+
 }
 
 $actores = obtenerActores($conexion);

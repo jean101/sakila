@@ -8,13 +8,11 @@ $idiomas = obtenerIdiomas($conexion);
 $lenguaje = $_GET["lenguaje"] ?? "";
 
 if (isset($_GET["guardar lenguaje"])) {
-    
-    
-    
+
+
 }
 
 $idiomas = obtenerIdiomas($conexion);
-
 
 
 include_once "vistas/vista_idioma.php";

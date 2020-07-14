@@ -5,9 +5,9 @@ $usuario = "root";
 $contrasena = "carlos0313";
 
 
-$ajustes = [19=>2];
+$ajustes = [19 => 2];
 try {
-    $conexion = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $contrasena,$ajustes);
+    $conexion = new PDO('mysql:host=localhost;dbname=sakila', $usuario, $contrasena, $ajustes);
 
 } catch (PDOException $exception) {
 

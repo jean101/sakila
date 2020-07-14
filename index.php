@@ -4,8 +4,7 @@ require_once "modelos/modelo_actor.php";
 $nombrePagina = "Bienvenidos a la pagina principal";
 
 
-
-$actores =  obtenerActores($conexion);
+$actores = obtenerActores($conexion);
 
 $monto = $_GET ["monto"] ?? "";
 $nombre = $_GET ["nombre"] ?? "";

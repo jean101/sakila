@@ -7,9 +7,8 @@ require_once "modelos/modelo_categoria.php";
 $nombre = $_GET["nombre"] ?? "";
 
 if (isset($_GET["Enviar categoria"])) {
-    
-    
-    
+
+
 }
 $categorias = obtenerCategorias($conexion);
 

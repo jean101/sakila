@@ -1,6 +1,7 @@
 <?php
 
-function reportarErrores($numero, $mensaje, $archivo, $linea) {
+function reportarErrores($numero, $mensaje, $archivo, $linea)
+{
     $codigos = [
         1 => "Error fatal",
         2 => "Advertencia",
@@ -17,7 +18,8 @@ function reportarErrores($numero, $mensaje, $archivo, $linea) {
 
 set_error_handler('reportarErrores');
 
-function reportarExcepciones($exception) {
+function reportarExcepciones($exception)
+{
     echo "<link rel=\"stylesheet\" href=\"static/css/bootstrap.min.css\">";
 
     echo "<div class=\"alert alert-danger\" role=\"alert\">
@@ -31,11 +33,13 @@ function reportarExcepciones($exception) {
 set_exception_handler('reportarExcepciones');
 
 
-function incluir_vista($nombre){
-    include_once  "vistas/vista_{$nombre}.php";
+function incluir_vista($nombre)
+{
+    include_once "vistas/vista_{$nombre}.php";
 }
 
-function imprimirArray($array){
+function imprimirArray($array)
+{
     echo '<pre>';
     print_r($array);
     echo '</pre>';

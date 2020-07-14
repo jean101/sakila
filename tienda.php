@@ -1,7 +1,7 @@
 <?php
 
 $nombrePagina = "tienda";
- 
+
 require_once "modelos/modelo_tienda.php";
 require_once "modelos/modelo_direccion.php";
 require_once "modelos/modelo_gerente.php";
@@ -16,11 +16,9 @@ $manager = $_GET["manager"] ?? "";
 $direccion = $_GET["direccion"] ?? "";
 
 
-
 if (isset ($_GET["guardar informacion"])) {
 
 }
-
 
 
 include_once "vistas/vista_tienda.php";

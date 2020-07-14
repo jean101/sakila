@@ -19,9 +19,8 @@ $IDdireccion = $_GET["IDdireccion"] ?? "";
 $activo = $_GET["activo"] ?? "";
 
 
-
 if (isset($_GET["enviar informacion"])) {
-    
+
 }
-    
+
 include_once "vistas/vista_cliente.php";

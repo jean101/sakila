@@ -23,5 +23,4 @@ if (isset ($_GET["Enviar informacion"])) {
 }
 
 
-
 include_once "vistas/vista_personal.php";

@@ -4,75 +4,75 @@ include_once "partes/partes_head.php";
 <body>
 
 
-
 <div class="">
-<div class="row">
-<div class="col-md-2">
-<?php
-    include "partes/partes_menu.php";
+    <div class="row">
+        <div class="col-md-2">
+            <?php
+            include "partes/partes_menu.php";
 
 
-?>
-</div>
+            ?>
+        </div>
 
-<div class="col-md-10">
-<h3 class="uy"><?php echo $nombrePagina; ?></h3>
+        <div class="col-md-10">
+            <h3 class="uy"><?php echo $nombrePagina; ?></h3>
 
-<hr class="jj">
+            <hr class="jj">
 
-<div class="row">
+            <div class="row">
 
-<div class="col-md-5">
-<form action="" method="get">
+                <div class="col-md-5">
+                    <form action="" method="get">
 
-<div class="mb-3">
-<label class="qw" for="pais" class="form-label">Digite el nombre de su pais</label>
-<input type="text" name="pais" class="form-control" id="pais" placeholder="Digite el nombre de su pais">
+                        <div class="mb-3">
+                            <label class="qw" for="pais" class="form-label">Digite el nombre de su pais</label>
+                            <input type="text" name="pais" class="form-control" id="pais"
+                                   placeholder="Digite el nombre de su pais">
 
-</div>
-       
-</form>
+                        </div>
 
-</div>
+                    </form>
 
-<br>
-<div class="mb-5">
-<input type="button" class="btn btn-success" value="Guardar pais">
+                </div>
 
-
-</div>
-<hr class="jmm">
+                <br>
+                <div class="mb-5">
+                    <input type="button" class="btn btn-success" value="Guardar pais">
 
 
-<div class="col-md-9">
-<div class="row">
-<table  class="table">
-<thead class="real">
-     <th scope="col">country_id</th>
-      <th scope="col">Country</th>
-</thead>
-<tbody>
+                </div>
+                <hr class="jmm">
 
 
-    <?php
-foreach ($paises as $pais){
+                <div class="col-md-9">
+                    <div class="row">
+                        <table class="table">
+                            <thead class="real">
+                            <th scope="col">country_id</th>
+                            <th scope="col">Country</th>
+                            </thead>
+                            <tbody>
 
-    echo "<tr>
+
+                            <?php
+                            foreach ($paises as $pais) {
+
+                                echo "<tr>
             <th scope=\"row\">{$pais["country_id"]}</th>
             <td>{$pais["country"]}</td>
          </tr>";
 
-}
+                            }
 
-    ?>
+                            ?>
 
 
-</tbody>
+                            </tbody>
 
-</table>
+                        </table>
 
-</div>
+                    </div>
 
-</div>
+                </div>
 </body>
 </html>

@@ -3,7 +3,8 @@
 require_once "config/conexion.php";
 
 
-function obtenerActores($conexion) {
+function obtenerActores($conexion)
+{
 
     $sql = "select * from actor;";
 

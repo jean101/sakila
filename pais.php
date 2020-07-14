@@ -10,13 +10,12 @@ $infoPaises = obtenerInfoPaises($conexion);
 
 
 if (isset($_GET["guardar datos"])) {
-    
-   
+
+
 }
 
 
 $paises = obtenerPaises($conexion);
-
 
 
 include_once "vistas/vista_pais.php";
