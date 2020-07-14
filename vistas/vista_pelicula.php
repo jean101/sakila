@@ -47,19 +47,20 @@
 </form>
 <br>
 
-<div class="mb-3">
-<select name="idioma" id="idioma" class="form-select">
-        <option value="">seleccione el  idioma original</option>
+    <div class="mb-3">
+        <label class="jjkkl" for="idioma1">   selecciona el idioma principal</label>
+        <select name="idioma1" id="idioma" class="form-select">
+            <option value="">  selecciona el idioma principal</option>
+            <?php
 
-        <?php
+            foreach ($idiomas as $idioma) {
 
-         foreach ($idiomas as $idioma) {
+                echo "  <option value=\"{$idioma["language_id"]}\">{$idioma["name"]}</option>";
+            }
+            ?>
 
-             echo "  <option value=\"{$idioma["language_id"]}\">{$idioma["name"]}</option>";
-         }
-         ?>
-     </select>
-</div>
+        </select>
+    </div>
 
     <div class="mb-3">
         <label class="jjkkl" for="idioma1">   selecciona el idioma secundario</label>

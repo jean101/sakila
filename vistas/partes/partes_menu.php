@@ -2,7 +2,7 @@
     <a class="navbar-brand text-white container-fluid" href="#">Sakila</a>
 </nav>
 
-  <?php
+ <?php
 
    $paginasMenu = [
 
@@ -16,22 +16,25 @@
     "pelicula"  => ["pelicula", "fa fa-video"],
     "idioma"  => ["idioma", "fa fa-language"],
     "personal"  => ["personal", "fa fa-users"],
-    "tienda"  => ["tienda", "fa fa-store"],
+    "tienda"  => ["tienda", "fa fa-store"]];
 
 
-   ];
 
-  foreach ($paginasMenu as $nombreArchivo => $pagina) {
-  $icono = $pagina[1];
-  $textoPagina = $pagina[0];
+    $url= $_SERVER['REQUEST_URI'];
 
-  echo "<a class=\"nav-link\" href=\"{$nombreArchivo}.php\">
-  <i  class=\"{$icono} d-inline-block mr-2\" style= 'width: 20px; ' ></i>
-  {$textoPagina}
-  </a>";
+   foreach($paginasMenu as $nombreArchivo => $item) {
 
- }
+      $paginaActual="";
+          if(strpos($url,$nombreArchivo)){
+              $paginaActual="activo";
 
+          }
 
+       $icono = $item[1];
+      $textoPagina = $item[0];
+
+      echo "<a class=\"nav-link {$paginaActual} \" href=\"{$nombreArchivo}.php\"> <i class=\"{$icono}\></i>  <spam> {$textoPagina}</spam></a>;
+   }
+  
+  
  ?>
-
