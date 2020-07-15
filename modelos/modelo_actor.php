@@ -14,4 +14,10 @@ function obtenerActores($conexion)
     return $datos;
 }
 
+function insertarActores($conexion , $datos){
+
+    $sql = "Insert Into actor (first_name, last_name) values (:nombreActor,:apellidoActor);";
+    return $conexion ->prepare($sql)->execute($datos);
+}
+
 

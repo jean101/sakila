@@ -8,7 +8,14 @@ $apellidoActor = $_GET["apellidoActor"] ?? "";
 
 if (isset($_GET["guardar actor"])) {
 
+}
 
+$datos = compact( "nombreActor", "apellidoActor");
+
+$insertado = insertarActores($conexion , $datos);
+
+if ($insertado) {
+    echo "insertados correctamente";
 }
 
 $actores = obtenerActores($conexion);

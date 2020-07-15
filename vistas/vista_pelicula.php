@@ -50,7 +50,7 @@
 
                     <div class="mb-3">
                         <label class="jjkkl" for="idioma1"> selecciona el idioma principal</label>
-                        <select name="idioma1" id="idioma" class="form-select">
+                        <select name="idioma1" id="idioma1" class="form-select">
                             <option value=""> selecciona el idioma principal</option>
                             <?php
 
@@ -64,8 +64,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="jjkkl" for="idioma1"> selecciona el idioma secundario</label>
-                        <select name="idioma1" id="idioma" class="form-select">
+                        <label class="jjkkl" for="idioma2"> selecciona el idioma secundario</label>
+                        <select name="idioma2" id="idioma2" class="form-select">
                             <option value=""> selecciona el idioma secundario</option>
                             <?php
 
@@ -128,8 +128,62 @@
 
                 </div>
 
+                <hr class="ya">
+                <div class="col-md-9">
+                    <div class="row">
+                        <table class="table">
+                            <thead class="real">
+                            <th scope="col">id de la pelicula</th>
+                            <th scope="col">titulo</th>
+                            <th scope="col">descripcion</th>
+                            <th scope="col">año de lanzamiento</th>
+                            <th scope="col">idioma oficial</th>
+                            <th scope="col">idioma secundarion</th>
+                            <th scope="col">Duracion de renta</th>
+                            <th scope="col">rental rate</th>
+                            <th scope="col">longitud</th>
+                            <th scope="col">costo de reemplazo</th>
+                            <th scope="col">clasificacion</th>
+                            <th scope="col">caracteristicas especiales</th>
 
-            </div>
+
+                            </thead>
+                            <tbody>
+
+                            <?php
+                            foreach ($infoPeliculas as $infoPelicula) {
+
+                                echo "<tr>
+            <th scope=\"row\">{$infoPelicula["film_id"]}</th>
+            <td>{$infoPelicula["title"]}</td>
+            <td>{$infoPelicula["description"]}</td>
+            <td>{$infoPelicula["release_year"]}</td>
+            <td>{$infoPelicula["name"]}</td>
+            <td>{$infoPelicula["name"]}</td>
+            <td>{$infoPelicula["rental_duration"]}</td>
+            <td>{$infoPelicula["rental_rate"]}</td>
+            <td>{$infoPelicula["length"]}</td>
+            <td>{$infoPelicula["replacement_cost"]}</td>
+            <td>{$infoPelicula["rating"]}</td>
+            <td>{$infoPelicula["special_features"]}</td>
+
+
+         </tr>";
+
+                            }
+
+                            ?>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                </div>
 
 
         </div>

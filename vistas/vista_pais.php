@@ -36,8 +36,8 @@ include_once "partes/partes_head.php";
                 </div>
 
                 <br>
-                <div class="mb-5">
-                    <input type="button" class="btn btn-success" value="Guardar pais">
+                <div class="mb-3">
+                    <button type="submit" name="guardar pais" class="btn btn-success">Guardar pais</button>
 
 
                 </div>
