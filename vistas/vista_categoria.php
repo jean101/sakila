@@ -25,7 +25,7 @@ include "partes/partes_head.php";
             <div class="row">
 
                 <div class="col-md-5">
-                    <form action="" method="get">
+                    <form action="" method="post">
 
                         <div class="mb-3">
                             <label class="asa" for="nombre" class="form-label">nombre de la categoria</label>

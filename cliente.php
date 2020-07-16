@@ -12,14 +12,14 @@ $tiendas = obtenerTiendas($conexion);
 $infoClientes = obtenerInfoClientes($conexion);
 
 
-$nombre = $_GET["nombre"] ?? "";
-$nombre2 = $_GET["nombre2"] ?? "";
-$email = $_GET["email"] ?? "";
-$IDdireccion = $_GET["IDdireccion"] ?? "";
-$activo = $_GET["activo"] ?? "";
+$nombre = $_POST["nombre"] ?? "";
+$nombre2 = $_POST["nombre2"] ?? "";
+$email = $_POST["email"] ?? "";
+$IDdireccion = $_POST["IDdireccion"] ?? "";
+$activo = $_POST["activo"] ?? "";
 
 
-if (isset($_GET["enviar informacion"])) {
+if (isset($_POST["enviar informacion"])) {
 
 }
 

@@ -6,13 +6,13 @@ $nombrePagina = "Bienvenidos a la pagina principal";
 
 $actores = obtenerActores($conexion);
 
-$monto = $_GET ["monto"] ?? "";
-$nombre = $_GET ["nombre"] ?? "";
-$edad = $_GET ["edad"] ?? "";
-$ciudad = $_GET ["ciudad"] ?? "";
-$q = $_GET ["q"] ?? "";
+$monto = $_POST ["monto"] ?? "";
+$nombre = $_POST ["nombre"] ?? "";
+$edad = $_POST ["edad"] ?? "";
+$ciudad = $_POST ["ciudad"] ?? "";
+$q = $_POST ["q"] ?? "";
 
-if (isset($_GET["enviar datos"])) {
+if (isset($_POST["enviar datos"])) {
 
 }
 include_once "vistas/vista_principal.php";

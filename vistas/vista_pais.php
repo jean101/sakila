@@ -22,7 +22,7 @@ include_once "partes/partes_head.php";
             <div class="row">
 
                 <div class="col-md-5">
-                    <form action="" method="get">
+                    <form action="" method="post">
 
                         <div class="mb-3">
                             <label class="qw" for="pais" class="form-label">Digite el nombre de su pais</label>

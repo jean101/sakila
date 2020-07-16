@@ -22,7 +22,7 @@
 
                 <div class="col-md-5">
 
-                    <form action="" method="get">
+                    <form action="" method="post">
 
 
                         <div class="mb-3">

@@ -22,7 +22,7 @@
 
                 <div class="col-md-3">
 
-                    <form action="" method="get">
+                    <form action="" method="post">
 
                         <div class="mb-3">
                             <label class="ssss" for="direccion"> Direccion de la tienda</label>

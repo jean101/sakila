@@ -3,20 +3,39 @@ $nombrePagina = "Actor";
 
 require_once "modelos/modelo_actor.php";
 
-$nombreActor = $_GET["nombreActor"] ?? "";
-$apellidoActor = $_GET["apellidoActor"] ?? "";
+$nombreActor = $_POST["nombreActor"] ?? "";
+$apellidoActor = $_POST["apellidoActor"] ?? "";
 
-if (isset($_GET["guardar actor"])) {
+try {
+    if (isset($_POST["Guardar actor"])) {
+        if (empty($nombreActor)) {
+
+            throw new Exception("El nombre no puede estar vacio");
+        }
+
+
+        if (empty($apellidoActor)) {
+
+            throw new Exception("El apellido no puede estar vacio");
+        }
+
+        $datos = compact("nombreActor", "apellidoActor");
+
+        $actoresInsertados = insertarActores($conexion, $datos);
+
+        if ($actoresInsertados) {
+            throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
+        }
+
+    }
+} catch (Exception $e) {
+    $error = $e->getMessage();
 
 }
 
-$datos = compact( "nombreActor", "apellidoActor");
 
-$insertado = insertarActores($conexion , $datos);
 
-if ($insertado) {
-    echo "insertados correctamente";
-}
+
 
 $actores = obtenerActores($conexion);
 

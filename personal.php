@@ -6,19 +6,19 @@ require_once "modelos/modelo_tienda.php";
 require_once "modelos/modelo_personal.php";
 
 
-$nombre = $_GET["nombre"] ?? "";
-$nombre2 = $_GET["nombre2"] ?? "";
-$direccion = $_GET["direccion"] ?? "";
-$foto = $_GET["foto"] ?? "";
-$email = $_GET["email"] ?? "";
-$tienda = $_GET["tienda"] ?? "";
-$activo = $_GET["activo"] ?? "";
-$username = $_GET["username"] ?? "";
-$password = $_GET["password"] ?? "";
+$nombre = $_POST["nombre"] ?? "";
+$nombre2 = $_POST["nombre2"] ?? "";
+$direccion = $_POST["direccion"] ?? "";
+$foto = $_POST["foto"] ?? "";
+$email = $_POST["email"] ?? "";
+$tienda = $_POST["tienda"] ?? "";
+$activo = $_POST["activo"] ?? "";
+$username = $_POST["username"] ?? "";
+$password = $_POST["password"] ?? "";
 $infoPersonales = obtenerInfoPersonales($conexion);
 $direcciones = obtenerDirecciones($conexion);
 $tiendas = obtenerTiendas($conexion);
-if (isset ($_GET["Enviar informacion"])) {
+if (isset ($_POST["Enviar informacion"])) {
 
 }
 

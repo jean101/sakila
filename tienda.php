@@ -12,11 +12,11 @@ $infoTiendas = obtenerInformacionTienda($conexion);
 
 $informacionTiendas = obtenerInformacionTienda($conexion);
 
-$manager = $_GET["manager"] ?? "";
-$direccion = $_GET["direccion"] ?? "";
+$manager = $_POST["manager"] ?? "";
+$direccion = $_POST["direccion"] ?? "";
 
 
-if (isset ($_GET["guardar informacion"])) {
+if (isset ($_POST["guardar informacion"])) {
 
 }
 

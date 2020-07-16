@@ -9,10 +9,10 @@ require_once "modelos/modelo_ciudades.php";
 $infoPaises = obtenerInfoPaises($conexion);
 
 
-$ciudad = $_GET["ciudad"] ?? "";
-$Pais = $_GET["Pais"] ?? "";
+$ciudad = $_POST["ciudad"] ?? "";
+$Pais = $_POST["Pais"] ?? "";
 
-if (isset($_GET["guardar "])) {
+if (isset($_POST["guardar "])) {
 
     echo "guardar ...";
 

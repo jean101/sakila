@@ -21,7 +21,7 @@
 
                 <div class="col-md-5">
 
-                    <form action="" method="get">
+                    <form action="" method="post">
                         <div class="mb-3">
                             <label class="cx" for="IDtienda"> seleccione el id tienda</label>
                             <select name="tienda" id="IDtienda" class="form-select">

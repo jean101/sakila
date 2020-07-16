@@ -4,9 +4,9 @@ $nombrePagina = "categoria";
 
 require_once "modelos/modelo_categoria.php";
 
-$nombre = $_GET["nombre"] ?? "";
+$nombre = $_POST["nombre"] ?? "";
 
-if (isset($_GET["Enviar categoria"])) {
+if (isset($_POST["Enviar categoria"])) {
 
 
 }

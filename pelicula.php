@@ -8,21 +8,21 @@ require_once "modelos/modelo_peliculas.php";
 $infoPeliculas = obtenerInfoPeliculas($conexion);
 $idiomas = obtenerIdiomas($conexion);
 
-$titulo = $_GET["titulo"] ?? "";
-$lanzamiento = $_GET["lanzamiento"] ?? "";
-$descripcion = $_GET["Descripcion"] ?? "";
-$idioma1 = $_GET["idioma1"] ?? "";
-$idioma2= $_GET["idioma2"] ?? "";
-$duracion = $_GET["duracion"] ?? "";
-$arrendamiento = $_GET["arrendamiento"] ?? "";
-$tamano = $_GET["tamaño"] ?? "";
-$remplazo = $_GET["remplazo"] ?? "";
-$rating = $_GET["rating"] ?? "";
-$caracteristicas= $_GET["caracteristicas"] ?? "";
+$titulo = $_POST["titulo"] ?? "";
+$lanzamiento = $_POST["lanzamiento"] ?? "";
+$descripcion = $_POST["Descripcion"] ?? "";
+$idioma1 = $_POST["idioma1"] ?? "";
+$idioma2= $_POST["idioma2"] ?? "";
+$duracion = $_POST["duracion"] ?? "";
+$arrendamiento = $_POST["arrendamiento"] ?? "";
+$tamano = $_POST["tamaño"] ?? "";
+$remplazo = $_POST["remplazo"] ?? "";
+$rating = $_POST["rating"] ?? "";
+$caracteristicas= $_POST["caracteristicas"] ?? "";
 
-$actores = $_GET["actores"] ?? "";
+$actores = $_POST["actores"] ?? "";
 
-if (isset($_GET["guardar descripcion"])) {
+if (isset($_POST["guardar descripcion"])) {
 
 
 }

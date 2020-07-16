@@ -21,7 +21,7 @@
 
                 <div class="mb-5">
                     <div class="col-md-5">
-                        <form action="" method="get">
+                        <form action="" method="post">
 
                             <div class="mb-3">
                                 <label class="rf" for="lenguaje" class="form-label">Digite el idioma</label>

@@ -5,9 +5,9 @@ require_once "modelos/modelo_idioma.php";
 
 $idiomas = obtenerIdiomas($conexion);
 
-$lenguaje = $_GET["lenguaje"] ?? "";
+$lenguaje = $_POST["lenguaje"] ?? "";
 
-if (isset($_GET["guardar lenguaje"])) {
+if (isset($_POST["guardar lenguaje"])) {
 
 
 }

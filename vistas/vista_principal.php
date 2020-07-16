@@ -21,7 +21,7 @@ include "partes/partes_head.php";
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="" method="get">
+                    <form action="" method="post">
                         <div class="mb-3">
                             <label class="er" for="inputNombre" class="form-label">nombre</label>
                             <input type="text" name="nombre" class="form-control" id="inputNombre"

@@ -21,7 +21,7 @@
 
                 <div class="col-md-5">
 
-                    <form action="" method="get">
+                    <form action="" method="post">
 
                         <div class="mb-3">
                             <label class="aaa" for="titulo" class="form-label">Titulo</label>

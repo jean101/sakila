@@ -10,16 +10,16 @@ $ciudades = obtenerCiudades($conexion);
 $infoDirecciones = obtenerInfoDirecciones($conexion);
 
 
-$direccion = $_GET["direccion"] ?? "";
-$direccion2 = $_GET["direccion2"] ?? "";
-$distrito = $_GET["distrito"] ?? "";
-$ciudad = $_GET["ciudad"] ?? "";
-$codigoPostal = $_GET["codigoPostal"] ?? "";
-$telefono = $_GET["telefono"] ?? "";
-$direccion = $_GET["IDciudad"] ?? "";
+$direccion = $_POST["direccion"] ?? "";
+$direccion2 = $_POST["direccion2"] ?? "";
+$distrito = $_POST["distrito"] ?? "";
+$ciudad = $_POST["ciudad"] ?? "";
+$codigoPostal = $_POST["codigoPostal"] ?? "";
+$telefono = $_POST["telefono"] ?? "";
+$direccion = $_POST["IDciudad"] ?? "";
 
 
-if (isset ($_GET["guardar direccion"])) {
+if (isset ($_POST["guardar direccion"])) {
 
 }
 
