@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" name="Guardar actor" class="btn btn-success">Guardar actor</button>
+                            <button type="submit" name="Guardar_actor" class="btn btn-success">Guardar actor</button>
 
 
                         </div>
@@ -51,7 +51,7 @@
                if (isset($error)) {
 
                   echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       soy un error
+                       {$error};
                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>

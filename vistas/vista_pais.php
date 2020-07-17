@@ -25,22 +25,22 @@ include_once "partes/partes_head.php";
                     <form action="" method="post">
 
                         <div class="mb-3">
-                            <label class="qw" for="pais" class="form-label">Digite el nombre de su pais</label>
+                            <label  for="pais" class="form-label qw">Digite el nombre de su pais</label>
                             <input type="text" name="pais" class="form-control" id="pais"
                                    placeholder="Digite el nombre de su pais">
 
                         </div>
+                        <div class="mb-3">
+                            <button type="submit" name="guardarPais" class="btn btn-success">guardar Pais</button>
 
+
+                        </div>
                     </form>
 
                 </div>
 
                 <br>
-                <div class="mb-3">
-                    <button type="submit" name="guardar pais" class="btn btn-success">Guardar pais</button>
 
-
-                </div>
                 <hr class="jmm">
 
 

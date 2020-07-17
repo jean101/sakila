@@ -1,15 +1,16 @@
 <?php
 
 $nombrePagina = "pais";
+require_once "funciones/ayudante.php";
 
 require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
-$pais = $_POST["Pais"] ?? "";
+$pais = $_POST["pais"] ?? "";
+imprimirArray($_POST);
+if (isset($_POST["guardarPais"])) {
 
-if (isset($_POST["guardar pais"])) {
-
-echo "guardar pais";
+echo "guardarPais";
 
     $datos = compact("pais");
 
