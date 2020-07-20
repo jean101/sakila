@@ -36,15 +36,42 @@ include "partes/partes_head.php";
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" name="Enviar categoria" class="btn btn-success">Enviar categoria
+                            <button type="submit" name="enviar_categoria" class="btn btn-success">Enviar categoria
                             </button>
 
 
                         </div>
 
+                        <?php
+
+                        if (isset($error)) {
+
+                            echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
+                       {$error};
+                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                    </div>";
+
+
+                        }
+
+                        if (isset($mensaje)) {
+
+                            echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
+                       {$mensaje};
+                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                    </div>";
+                        }
+                        ?>
+
                     </form>
 
                 </div>
+
+
                 <hr class="xv">
 
                 <div class="col-md-9">
