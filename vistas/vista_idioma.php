@@ -35,7 +35,7 @@
                 </div>
                 <div class="mb-3">
 
-                    <button type="submit" name="guardar_lenguaje " class="btn btn-success">Guardar datos</button>
+                    <button type="submit" name="guardar_lenguaje" class="btn btn-success">Guardar datos</button>
 
                 </div>
                 </form>

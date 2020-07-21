@@ -5,14 +5,12 @@ require_once "funciones/ayudante.php";
 require_once "modelos/modelo_categoria.php";
 
 $nombre = $_POST["nombre"] ?? "";
-imprimirArray($_POST);
-if (isset($_POST["enviar_categoria"])) {
 
     try {
-        if (isset ($_POST["guardar_usuario"])) {
+        if (isset($_POST["enviar_categoria"])) {
 
             if (empty($nombre)) {
-                throw new Exception("El nombre no puede estar vacio");
+                throw new Exception("La categoria no puede estar vacio");
             }
 
             //preparar el array con los datos
@@ -27,7 +25,7 @@ if (isset($_POST["enviar_categoria"])) {
     } catch (Exception $e) {
         $error = $e->getMessage();
     }
-}
+
 
 
 $categorias = obtenerCategorias($conexion);
