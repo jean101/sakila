@@ -6,7 +6,6 @@ require_once "modelos/modelo_actor.php";
 $nombreActor = $_POST["nombreActor"] ?? "";
 $apellidoActor = $_POST["apellidoActor"] ?? "";
 
-imprimirArray($_POST);
 try {
     if (isset($_POST["Guardar_actor"])) {
         if (empty($nombreActor)) {

@@ -16,7 +16,6 @@ $distrito = $_POST["distrito"] ?? "";
 $ciudad = $_POST["ciudad"] ?? "";
 $codigoPostal = $_POST["codigoPostal"] ?? "";
 $telefono = $_POST["telefono"] ?? "";
-$direccion = $_POST["IDciudad"] ?? "";
 
 
 if (isset ($_POST["guardar direccion"])) {

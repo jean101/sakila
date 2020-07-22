@@ -105,4 +105,7 @@ include "partes/partes_head.php";
                 </div>
 
 </body>
+<?php
+include_once "partes/partes_foot.html";
+?>
 </html>

@@ -8,18 +8,31 @@ require_once "modelos/modelo_ciudades.php";
 
 $pais = $_POST["pais"] ?? "";
 imprimirArray($_POST);
-if (isset($_POST["guardarPais"])) {
 
-echo "guardarPais";
+    try {
+        if (isset($_POST["guardarPais"])) {
 
-    $datos = compact("pais");
+            if (empty($pais)) {
 
-    $insertado = insertarPaises($conexion , $datos);
+                throw new Exception("El pais no puede estar vacio");
+            }
 
-    if ($insertado) {
-        echo "insertados correctamente";
+
+
+
+            $datos = compact("pais");
+
+            $paisesInsertados = insertarPaises($conexion, $datos);
+
+            if (!$paisesInsertados) {
+                throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
+            }
+
+        }
+    } catch (Exception $e) {
+        $error = $e->getMessage();
+
     }
-}
 
 
 

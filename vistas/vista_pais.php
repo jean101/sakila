@@ -39,6 +39,32 @@ include_once "partes/partes_head.php";
 
                 </div>
 
+                <?php
+
+                if (isset($error)) {
+
+                    echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
+                       {$error};
+                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                    </div>";
+
+
+                }
+
+                if (isset($mensaje)) {
+
+                    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
+                       {$mensaje};
+                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                    </div>";
+                }
+                ?>
+
+
                 <br>
 
                 <hr class="jmm">
@@ -75,4 +101,7 @@ include_once "partes/partes_head.php";
 
                 </div>
 </body>
+<?php
+include_once "partes/partes_foot.html";
+?>
 </html>

@@ -99,4 +99,7 @@
             </div>
 
 </body>
+<?php
+include_once "partes/partes_foot.html";
+?>
 </html>
