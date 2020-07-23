@@ -74,8 +74,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="vb" for="locacion">ubicacion</label>
-                            <input type="text" name="locacion" id="telefono" class="form-control">
+                            <label class="vb" for="ubicacion">ubicacion</label>
+                            <input type="text" name="ubicacion" id="ubicacion" class="form-control">
                         </div>
 
                         <div class="mb-3">
