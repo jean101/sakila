@@ -18,8 +18,6 @@ imprimirArray($_POST);
             }
 
 
-
-
             $datos = compact("pais");
 
             $paisesInsertados = insertarPaises($conexion, $datos);

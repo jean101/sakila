@@ -31,15 +31,15 @@
 
                         </div>
                         <div class="mb-3">
-                            <label class="ws" for="pais"> pais</label>
-                            <select name="pais" id="pais" class="form-select">
-                                <option value=""> Elija el pais</option>
+                            <label class="ws" for="paises"> pais</label>
+                            <select name="paises" id="paises" class="form-select">
+                                <option value="paises"> Elija el pais</option>
 
                                 <?php
 
-                                foreach ($paises as $pais) {
+                                foreach ($infoPaises as $paises) {
 
-                                    echo "  <option value=\"{$pais["country"]}\">{$pais["country"]}</option>";
+                                    echo "  <option value=\"{$paises["country"]}\">{$paises["country"]}</option>";
                                 }
                                 ?>
 
@@ -47,13 +47,15 @@
                         </div>
 
                         <div class="mb-3">
-
-                            <button type="submit" name="guardar " class="btn btn-success">guardar datos</button>
+                            <button type="submit" name="guardar_informacion" class="btn btn-success">guardar informacion</button>
 
                         </div>
 
-
                     </form>
+                    <?php
+                    include_once "partes/partes_alerta.php";
+                    include_once "partes/partes_foot.html";
+                    ?>
 
                 </div>
 

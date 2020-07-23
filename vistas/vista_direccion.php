@@ -80,12 +80,16 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" name="guardar" class="btn btn-success">guardar Direccion</button>
+                            <button type="submit" name="guardar_direccion" class="btn btn-success">guardar Direccion</button>
 
                         </div>
 
 
                     </form>
+                    <?php
+                    include_once "partes/partes_alerta.php";
+                    include_once "partes/partes_foot.html";
+                    ?>
                 </div>
 
                 <hr class="ya">

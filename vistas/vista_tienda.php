@@ -61,7 +61,7 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" name="guardar Informacion" class="btn btn-success">Guardar
+                            <button type="submit" name="guardar_informacion" class="btn btn-success">Guardar
                                 Informacion
                             </button>
 
@@ -108,32 +108,14 @@
 
 
                     </form>
+                    <?php
+                    include_once "partes/partes_foot.html";
+
+                    include_once "partes/partes_alerta.php";
+                    ?>
                 </div>
 
-                <?php
 
-                if (isset($error)) {
-
-                    echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-
-
-                }
-
-                if (isset($mensaje)) {
-
-                    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                       {$mensaje};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-                }
-                ?>
 
 
             </div>
