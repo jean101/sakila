@@ -37,6 +37,7 @@
 
                         </div>
 
+
                         <div class="mb-3">
                             <label class="qdfg" for="lanzamiento" class="form-label">Lanzamiento</label>
                             <input type="text" name="lanzamiento" class="form-control" id="lanzamiento"
@@ -122,11 +123,15 @@
 
 
                 <div class="mb-3">
-                    <button type="submit" name="guardar descripcion" class="btn btn-success">Guardar descripcion
+                    <button type="submit" name="guardar_descripcion" class="btn btn-success">Guardar descripcion
                     </button>
 
 
                 </div>
+                <?php
+                include_once "partes/partes_alerta.php";
+                include_once "partes/partes_foot.html";
+                ?>
 
                 <hr class="ya">
                 <div class="col-md-9">

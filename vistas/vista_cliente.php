@@ -23,8 +23,8 @@
 
                     <form action="" method="post">
                         <div class="mb-3">
-                            <label class="cx" for="IDtienda"> seleccione el id tienda</label>
-                            <select name="tienda" id="IDtienda" class="form-select">
+                            <label class="cx" for="tienda"> seleccione el id tienda</label>
+                            <select name="tienda" id="tienda" class="form-select">
                                 <option value=""> seleccione el id tienda</option>
 
                                 <?php
@@ -79,8 +79,8 @@
                                     </label>
                                 </div>
 
-                                <div class="mt-3">
-                                    <input type="button" class="btn btn-success" value="Enviar informacion">
+                                <div class="mb-3">
+                                    <button type="submit" name="guardar_datos" class="btn btn-success">Guardar datos</button>
 
 
                                 </div>
@@ -90,6 +90,11 @@
 
 
                     </form>
+
+                    <?php
+                    include_once "partes/partes_alerta.php";
+                    include_once "partes/partes_foot.html";
+                    ?>
                 </div>
 
 

@@ -22,9 +22,59 @@ $caracteristicas= $_POST["caracteristicas"] ?? "";
 
 $actores = $_POST["actores"] ?? "";
 
-if (isset($_POST["guardar descripcion"])) {
 
+    try {
+        if (isset($_POST["guardar_descripcion"])) {
 
+            if (empty($titulo)) {
+                throw new Exception("El titulo no puede estar vacio");
+            }
+            if (empty($lanzamiento)) {
+                throw new Exception("El lanzamiento  no puede estar vacio");
+            }
+            if (empty($descripcion)) {
+                throw new Exception("La descripcion no puede estar vacia");
+            }
+            if (empty($idioma1)) {
+                throw new Exception("El idioma no puede estar vacio");
+            }
+            if (empty($idioma2)) {
+                throw new Exception("El segundo idioma no puede estar vacio");
+            }
+            if (empty($duracion)) {
+                throw new Exception("La duracion no puede estar vacia");
+            }
+            if (empty($arrendamiento)) {
+                throw new Exception("El arrendamiento no puede estar vacio");
+            }
+            if (empty($tamano)) {
+                throw new Exception("El tamano no puede estar vacio");
+            }
+            if (empty($remplazo)) {
+                throw new Exception("El remplazo  no puede estar vacio");
+            }
+            if (empty($rating)) {
+                throw new Exception("El rating  no puede estar vacio");
+            }
+            if (empty($caracteristicas)) {
+                throw new Exception("La caracteristicas no puede estar vacia");
+            }
+        }
+
+        //preparar el array con los datos
+            $datos = compact("titulo","lanzamiento","descripcion","idioma1","idioma2","duracion","arrendamiento","tamano","remplazo","rating","caracteristicas");
+            //insertar datos
+            $peliculasInsertadas = insertarPeliculas($conexion, $datos);
+            $mensaje = "todo esta insertado correctamente";
+            if (!$peliculasInsertadas) {
+                throw new Exception("Los datos no se han insertado correctamente");
+            }
+        }
+     catch (Exception $e) {
+    $error = $e->getMessage();
 }
+
+
+
 
 include_once "vistas/vista_pelicula.php";
