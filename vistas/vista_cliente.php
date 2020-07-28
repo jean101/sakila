@@ -117,16 +117,31 @@
                             <?php
                             foreach ($infoClientes as $infoCliente) {
 
+
+                                if ($infoCliente['active']) == 1 ) {
+                                 $icono = '<i class=\'fas fa-check text-success\'> </i>';
+                                } else{
+
+                                $icono = '<i class=\'fas-fa-times text-danger\'></i>';
+                                }
+
+
+
                                 echo "<tr>
             <td>{$infoCliente["customer_id"]}</td>
             <td>{$infoCliente["store_id"]}</td>
-            <td>{$infoCliente["first_name"]}</td>
+            <td> . ucwords (srtolower{$infoCliente["name"]}) .</td>
             <td>{$infoCliente["last_name"]}</td>
             <td>{$infoCliente["email"]}</td>
             <td>{$infoCliente["address"]}</td>
-            <td>{$infoCliente["active"]}</td>
+            <td>{$infoCliente["active"]}
+            
+             <i class='fas-fa check text-sucess'></i>
+             <i class='fas-fa times text-danger'></i>
 
-
+            </td>  
+            <td>{$infoCliente["fecha"]}</td>
+           
          </tr>";
 
                             }

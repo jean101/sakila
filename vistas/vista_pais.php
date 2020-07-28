@@ -68,6 +68,13 @@ include_once "partes/partes_head.php";
                 <br>
 
                 <hr class="jmm">
+                <?php
+                ?>
+                <?php if (empty($pais)){ ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
+                    </div>
+                <?php }else{ ?>
 
 
                 <div class="col-md-9">
@@ -84,9 +91,9 @@ include_once "partes/partes_head.php";
                             foreach ($paises as $pais) {
 
                                 echo "<tr>
-            <th scope=\"row\">{$pais["country_id"]}</th>
-            <td>{$pais["country"]}</td>
-         </tr>";
+                    <th scope=\"row\">{$pais["country_id"]}</th>
+                    <td>{$pais["country"]}</td>
+                 </tr>";
 
                             }
 
@@ -98,8 +105,8 @@ include_once "partes/partes_head.php";
                         </table>
 
                     </div>
-
                 </div>
+                <?php }?>
 </body>
 <?php
 include_once "partes/partes_foot.html";

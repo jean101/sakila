@@ -9,8 +9,8 @@ $infoPeliculas = obtenerInfoPeliculas($conexion);
 $idiomas = obtenerIdiomas($conexion);
 
 $titulo = $_POST["titulo"] ?? "";
-$lanzamiento = $_POST["lanzamiento"] ?? "";
 $descripcion = $_POST["Descripcion"] ?? "";
+$lanzamiento = $_POST["lanzamiento"] ?? "";
 $idioma1 = $_POST["idioma1"] ?? "";
 $idioma2= $_POST["idioma2"] ?? "";
 $duracion = $_POST["duracion"] ?? "";
@@ -29,11 +29,11 @@ $actores = $_POST["actores"] ?? "";
             if (empty($titulo)) {
                 throw new Exception("El titulo no puede estar vacio");
             }
-            if (empty($lanzamiento)) {
-                throw new Exception("El lanzamiento  no puede estar vacio");
-            }
             if (empty($descripcion)) {
                 throw new Exception("La descripcion no puede estar vacia");
+            }
+            if (empty($lanzamiento)) {
+                throw new Exception("El lanzamiento no puede estar vacia");
             }
             if (empty($idioma1)) {
                 throw new Exception("El idioma no puede estar vacio");
