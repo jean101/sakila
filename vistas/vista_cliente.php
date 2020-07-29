@@ -105,11 +105,12 @@
                             <thead class="real">
                             <th scope="col">customer_id</th>
                             <th scope="col">store_id</th>
-                            <th scope="col">first_name</th>
-                            <th scope="col">last_name</th>
+                            <th scope="col">name</th>
                             <th scope="col">email</th>
                             <th scope="col">address</th>
                             <th scope="col">active</th>
+                            <th scope="col">feha</th>
+
 
                             </thead>
                             <tbody>
@@ -122,18 +123,17 @@
                                  $icono = '<i class=\'fas fa-check text-success\'> </i>';
                                 } else{
 
-                                $icono = '<i class=\'fas-fa-times text-danger\'></i>';
+                                $icono = '<i class=\'fas fa-times text-danger\'></i>';
                                 }
                                 echo "<tr>
                                 <td>{$infoCliente["customer_id"]}</td>
                                 <td>{$infoCliente["store_id"]}</td>
-                                <td> . ucwords (srtolower{$infoCliente["name"]}) .</td>
+                                <td> ". ucwords (strtolower($infoCliente["name"]) )."</td>
                                 <td>{$infoCliente["email"]}</td>
                                 <td>{$infoCliente["address"]}</td>
-                                <td>{$infoCliente["active"]}
+                                <td>{$infoCliente["activo"]}
                                 
-                                 <i class='fas-fa check text-sucess'></i>
-                                 <i class='fas-fa times text-danger'></i>
+                                 {$icono}
 
                             </td>  
                             <td>{$infoCliente["fecha"]}</td>
