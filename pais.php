@@ -7,7 +7,6 @@ require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
 $pais = $_POST["pais"] ?? "";
-imprimirArray($_POST);
 
     try {
         if (isset($_POST["guardarPais"])) {

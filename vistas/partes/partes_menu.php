@@ -1,5 +1,5 @@
-<nav class="nav flex-column ">
-    <a class="navbar-brand text-white bg-primary" href="#">Sakila</a>
+<nav class="nav flex-column  ">
+    <a  class="navbar-brand text-white bg-dark"  href="#">Sakila</a>
 
     <?php
 

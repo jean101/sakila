@@ -1,4 +1,4 @@
-*+<?php
+<?php
 $nombrePagina = "Actor";
 require_once "funciones/ayudante.php";
 require_once "modelos/modelo_actor.php";
@@ -28,35 +28,33 @@ try {
         }
 
     }
+    if (isset($_POST["eliminarActor"])) {
+
+            $idActor = $_POST["eliminarActor"] ?? "";
+
+//validar datos
+        if (empty($idActor)) {
+            throw new Exception("El valor del id esta vacio");
+        }
+        $datos = compact("idActor");
+
+//eliminar
+        $eliminado = eliminarActores($conexion, $datos);
+        $mensaje = "Los datos fueron eliminados correctamente";
+
+//Lanzar error
+
+        if (!$eliminado) {
+            throw new Exception("Los datos no se eliminaron correctamente");
+        }
+    }
+
 } catch (Exception $e) {
     $error = $e->getMessage();
 
 }
 
-if (isset($_POST["accion"]))
 
-    if ($_POST["accion"] == "eliminarActor"){
-        $idActor = $_POST["eliminarActor"] ?? "";
+    $actores = obtenerActores($conexion);
 
-    }
-//validar datos
-if (empty($idActor)){
-    throw new Exception("El valor del id esta vacio");
-}
-$datos = compact("idActor");
-
-//eliminar
-$eliminado = eliminarActores($conexion, $datos);
-$mensaje = "Los datos fueron eliminados correctamente";
-
-//Lanzar error
-
-if (!$eliminado){
-    throw new Exception("Los datos no se eliminaron correctamente");
-}
-
-
-
-$actores = obtenerActores($conexion);
-
-include_once "vistas/vista_actor.php";
+    include_once "vistas/vista_actor.php";

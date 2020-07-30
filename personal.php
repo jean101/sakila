@@ -6,7 +6,6 @@ require_once "modelos/modelo_tienda.php";
 require_once "modelos/modelo_personal.php";
 require_once "funciones/ayudante.php";
 
-imprimirArray($_POST);
 
 $nombre = $_POST["nombre"] ?? "";
 $apellido = $_POST["apellido"] ?? "";
