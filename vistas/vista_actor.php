@@ -83,7 +83,7 @@
                         </div>
                     <?php }else{ ?>
 
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="row">
                             <table class="table">
                                 <thead class="dong">
@@ -101,6 +101,10 @@
                             <th scope=\"row\">{$actor["actor_id"]}</th>
                             <td>{$actor["first_name"]}</td>
                             <td>{$actor["last_name"]}</td>
+                            <td>
+                            <button class='btn btn-outline-success btn-sm' name='eliminarActor' value='{$actor["actor_id"]}'><i class='fas fa-trash'</i>/button>
+                            <button class='btn btn-outline-info btn-sm' title='Editar actor'> <i class='fas fa-pen'></i> /button>
+                            </td>
                          </tr>";
 
                                 }
