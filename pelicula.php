@@ -9,6 +9,7 @@ require_once "modelos/modelo_peliculas.php";
 $titulo = $_POST["titulo"] ?? "";
 $descripcion = $_POST["Descripcion"] ?? "";
 $lanzamiento = $_POST["lanzamiento"] ?? "";
+$anoLanzamiento = $_POST["anoLanzamiento"] ?? "";
 $idioma1 = $_POST["idioma1"] ?? "";
 $idioma2 = $_POST["idioma2"] ?? "";
 $duracion = $_POST["duracion"] ?? "";

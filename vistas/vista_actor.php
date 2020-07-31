@@ -85,21 +85,22 @@
 
                     <div class="col-md-12">
                         <div class="row">
-                            <table class="table">
-                                <thead class="dong">
-                                <th scope="col">ID</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">apellido</th>
-                                <th scope="col">acciones</th>
+                            <form action="" method="post">
+                                <table class="table">
+                                    <thead class="dong">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">apellido</th>
+                                    <th scope="col">acciones</th>
 
-                                </thead>
-                                <tbody>
+                                    </thead>
+                                    <tbody>
 
 
-                                <?php
-                                foreach ($actores as $actor) {
+                                    <?php
+                                    foreach ($actores as $actor) {
 
-                                    echo "<tr>
+                                        echo "<tr>
                             <th scope=\"row\">{$actor["actor_id"]}</th>
                             <td>{$actor["first_name"]}</td>
                             <td>{$actor["last_name"]}</td>
@@ -109,15 +110,15 @@
                             </td>
                          </tr>";
 
-                                }
+                                    }
 
-                                ?>
+                                    ?>
 
 
-                                </tbody>
+                                    </tbody>
 
-                            </table>
-
+                                </table>
+                            </form>
                         </div>
                         <?php
                         }

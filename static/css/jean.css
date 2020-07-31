@@ -1,8 +1,11 @@
 .activo{
     color: black;
-    background-color: grey;
+    background-color: white;
 }
 
 .yy{
     color: white;
+}
+.ww{
+    color: lightgrey;
 }

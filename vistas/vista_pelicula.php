@@ -44,6 +44,23 @@
                                    placeholder="Lanzamiento">
 
                         </div>
+                        <div class="mb-3">
+                            <label for="anolanzamiento" class="form-label">Año de lanzamiento</label>
+                            <input class="form-control" list="listadoAnios" name="anoLanzamiento"id="anolanzamiento" placeholder="Elige el año de lanzamiento">
+                            <datalist id="listadoAnios">
+
+                                <?php
+                                for ($year = date ("y"); $year >= 1980; $year--){
+                                    echo "<option value=\"{$year}\">";
+                                }
+
+                                ?>
+
+                            </datalist>
+
+
+
+                        </div>
 
                         <br>
 
@@ -111,14 +128,21 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="traper" for="caracteristicas" class="form-label">caracteristicas
-                                especiales</label>
-                            <input type="text" name="caracteristicas" class="form-control" id="caracteristicas"
-                                   placeholder="caracteristicas">
+                            <label class="" for="caracteristicas"> selecciona las caracteristicas</label>
+                            <select name="caracteristicas" id="caracteristicas" class="form-select">
+                                <option value=""> selecciona las caracteristicas</option>
+                                <?php
+                                $caracteristicas = ["trailers","commentaries","deleted scenes","Behind the scenes"];
+                                foreach ($caracteristicas as $caracteristica){
+                                    echo "<option value=\"{$caracteristica}\">{$caracteristica}</option>";
+                                }
+                                ?>
 
+                            </select>
                         </div>
 
-                        
+
+
                         <div class="mb-3">
                             <button type="submit" name="guardar_descripcion" class="btn btn-success">Guardar descripcion
                             </button>
@@ -134,7 +158,7 @@
                 ?>
 
                 <hr class="ya">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <div class="row">
                         <table class="table">
                             <thead class="real">
