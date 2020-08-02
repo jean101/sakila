@@ -3,7 +3,6 @@ include_once "partes/partes_head.php";
 ?>
 <body>
 
-
 <div class="">
     <div class="row">
         <div class="col-md-2">
@@ -25,7 +24,7 @@ include_once "partes/partes_head.php";
                     <form action="" method="post">
 
                         <div class="mb-3">
-                            <label  for="pais" class="form-label qw">Digite el nombre de su pais</label>
+                            <label for="pais" class="form-label qw">Digite el nombre de su pais</label>
                             <input type="text" name="pais" class="form-control" id="pais"
                                    placeholder="Digite el nombre de su pais">
 
@@ -39,16 +38,17 @@ include_once "partes/partes_head.php";
 
                 </div>
 
+
                 <?php
 
                 if (isset($error)) {
 
                     echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
+                                   {$error};
+                               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                                        <span aria-hidden=\"true\">&times;</span>
+                                    </button>
+                                </div>";
 
 
                 }
@@ -56,11 +56,11 @@ include_once "partes/partes_head.php";
                 if (isset($mensaje)) {
 
                     echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                       {$mensaje};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
+                                   {$mensaje};
+                               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                                        <span aria-hidden=\"true\">&times;</span>
+                                    </button>
+                                </div>";
                 }
                 ?>
 
@@ -88,27 +88,38 @@ include_once "partes/partes_head.php";
 
 
                             <?php
-                            foreach ($paises as $pais) {
+                            foreach ($paises
 
-                                echo "<tr>
-                    <th scope=\"row\">{$pais["country_id"]}</th>
-                    <td>{$pais["country"]}</td>
-                 </tr>";
+                            as $pais) {
 
-                            }
+                            echo "<tr>
+                                <th scope=\"row\">{$pais["country_id"]}</th>
+                                <td>{$pais["country"]}</td>
+                                <td>
+                                        <button class='btn btn-outline-success btn-sm' name='eliminarPais' value='{$pais[\"country\"]}'><i class='fas fa-trash'></i></button>
+                                        <button class='btn btn-outline-info btn-sm' title='Editar actor'> <i class='fas fa-pen'></i> </button>
+                                </td>
+                             </tr>";
 
-                            ?>
+                                    }
+                                            ?>
+
+                            include_once "partes/partes_foot.html";
 
 
                             </tbody>
 
                         </table>
+                        </form>
 
                     </div>
+
+
                 </div>
-                <?php }?>
+                <?php
+                }
+                ?>
+
 </body>
-<?php
-include_once "partes/partes_foot.html";
-?>
+
 </html>
