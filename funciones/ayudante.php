@@ -32,6 +32,10 @@ function reportarExcepciones($exception)
 
 set_exception_handler('reportarExcepciones');
 
+function redireccionar($ruta)
+{
+    header("Location: {$ruta}", true, 303);
+}
 
 function incluir_vista($nombre)
 {
@@ -43,4 +47,12 @@ function imprimirArray($array)
     echo '<pre>';
     print_r($array);
     echo '</pre>';
+}
+
+if (session_status() == 2) {
+    $mensaje = $_SESSION["mensaje"] ?? "";
+
+    if (isset($_SESSION["mensaje"])) {
+        unset($_SESSION["mensaje"]);
+    }
 }

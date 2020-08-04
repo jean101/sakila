@@ -61,7 +61,7 @@ try {
         $datos = compact("titulo", "lanzamiento", "descripcion", "idioma1", "idioma2", "duracion", "arrendamiento", "tamano", "remplazo", "rating", "caracteristicas");
         //insertar datos
         $peliculasInsertadas = insertarPeliculas($conexion, $datos);
-        $mensaje = "todo esta insertado correctamente";
+        $_SESSION["mensaje"] = "todo esta insertado correctamente";
         if (!$peliculasInsertadas) {
             throw new Exception("Los datos no se han insertado correctamente");
         }

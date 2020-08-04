@@ -7,7 +7,6 @@ include "partes/partes_head.php";
 <body>
 
 
-
 <div class="">
     <div class="row">
         <div class="col-md-2">
@@ -33,17 +32,20 @@ include "partes/partes_head.php";
 
                         <div class="mb-3">
                             <label class="fds" for="nombre">Introduzca su nombre</label>
-                            <input type="text" name="nombre" value="<?php echo $nombre?>" id="nombre" class="form-control">
+                            <input type="text" name="nombre" value="<?php echo $nombre ?>" id="nombre"
+                                   class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="tre" for="apellido">Introduzca el apellido</label>
-                            <input type="text" name="apellido"  value="<?php echo $apellido?>"id="apellido" class="form-control">
+                            <input type="text" name="apellido" value="<?php echo $apellido ?>" id="apellido"
+                                   class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="jhl" for="direccion"> Direccion</label>
-                            <select name="direccion" value="<?php echo $idDireccion?>" id="direccion" class="form-select">
+                            <select name="direccion" value="<?php echo $idDireccion ?>" id="direccion"
+                                    class="form-select">
                                 <option value="">Direccion</option>
 
                                 <?php
@@ -58,7 +60,8 @@ include "partes/partes_head.php";
 
                         <div class="form-file">
 
-                            <input type="file" name="imagen" value="<?php echo $imagen?>"class="form-file-input" id="imagen">
+                            <input type="file" name="imagen" value="<?php echo $imagen ?>" class="form-file-input"
+                                   id="imagen">
 
 
                             <label class="form-file-label" for="imagen">
@@ -70,12 +73,13 @@ include "partes/partes_head.php";
 
                         <div class="mb-3">
                             <label class="yut" for="email">Introduzca su email</label>
-                            <input type="text" name="email" value="<?php echo $email?>"id="email" class="form-control">
+                            <input type="text" name="email" value="<?php echo $email ?>" id="email"
+                                   class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="iou" for="tienda"> tienda</label>
-                            <select name="tienda" value="<?php echo $idTienda?>"id="tienda" class="form-select">
+                            <select name="tienda" value="<?php echo $idTienda ?>" id="tienda" class="form-select">
                                 <option value=""> tienda</option>
 
                                 <?php
@@ -89,7 +93,8 @@ include "partes/partes_head.php";
                         </div>
 
                         <div class="qazx" class="form-check">
-                            <input class="form-check-input"  name="activo"value="<?php echo $activo?>" type="checkbox" value="" id="activo">
+                            <input class="form-check-input" name="activo" value="<?php echo $activo ?>" type="checkbox"
+                                   value="" id="activo">
                             <label class="form-check-label" for="activo">
                                 Activo
                             </label>
@@ -97,12 +102,14 @@ include "partes/partes_head.php";
 
                         <div class="mb-3">
                             <label class="red" for="username">Nombre que utiliza el usuario</label>
-                            <input type="text" name="username" value="<?php echo $username?>"id="username" class="form-control">
+                            <input type="text" name="username" value="<?php echo $username ?>" id="username"
+                                   class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="wwr" for="password">Introduzca su contraseña</a></label>
-                            <input type="text" name="password"  value="<?php echo $password?>"id="password" class="form-control">
+                            <input type="text" name="password" value="<?php echo $password ?>" id="password"
+                                   class="form-control">
                         </div>
 
                         <div class="mb-3">
@@ -115,12 +122,11 @@ include "partes/partes_head.php";
                 </div>
 
 
-
                 <?php
 
-               if (isset($error)) {
+                if (isset($error)) {
 
-                  echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
+                    echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
                        {$error};
                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
@@ -128,7 +134,7 @@ include "partes/partes_head.php";
                     </div>";
 
 
-               }
+                }
 
 
                 if (isset($mensaje)) {
@@ -141,7 +147,6 @@ include "partes/partes_head.php";
                     </div>";
                 }
                 ?>
-
 
 
                 <hr class="ya">

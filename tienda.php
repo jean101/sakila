@@ -12,28 +12,28 @@ $manager = $_POST["manager"] ?? "";
 $direccion = $_POST["direccion"] ?? "";
 
 
-    try {
-        if (isset ($_POST["guardar_informacion"])) {
+try {
+    if (isset ($_POST["guardar_informacion"])) {
 
-            if (empty($direccion)) {
-                throw new Exception("La direccion no puede estar vacia");
-            }
-            if (empty($manager)) {
-                throw new Exception("El manager  no puede estar vacio");
-            }
-
-            //preparar el array con los datos
-            $datos = compact("direccion","manager");
-            //insertar datos
-            $tiendasInsertadas = insertarTiendas($conexion, $datos);
-            $mensaje = "todo esta insertado correctamente";
-            if (!$tiendasInsertadas) {
-                throw new Exception("Los datos no se han insertado correctamente");
-            }
+        if (empty($direccion)) {
+            throw new Exception("La direccion no puede estar vacia");
         }
-    } catch (Exception $e) {
-        $error = $e->getMessage();
+        if (empty($manager)) {
+            throw new Exception("El manager  no puede estar vacio");
+        }
+
+        //preparar el array con los datos
+        $datos = compact("direccion", "manager");
+        //insertar datos
+        $tiendasInsertadas = insertarTiendas($conexion, $datos);
+        $_SESSION["mensaje"] = "todo esta insertado correctamente";
+        if (!$tiendasInsertadas) {
+            throw new Exception("Los datos no se han insertado correctamente");
+        }
     }
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
 
 $direcciones = obtenerDirecciones($conexion);

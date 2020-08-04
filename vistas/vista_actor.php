@@ -51,7 +51,7 @@
                 if (isset($error)) {
 
                     echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error};
+                       {$error}
                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>
@@ -60,10 +60,11 @@
 
                 }
 
-                if (isset($mensaje)) {
+                if (isset($mensaje) && !empty($mensaje)) {
+
 
                     echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                       {$mensaje};
+                       {$mensaje}
                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>
@@ -105,7 +106,7 @@
                             <td>{$actor["first_name"]}</td>
                             <td>{$actor["last_name"]}</td>
                             <td>
-                            <button class='btn btn-outline-success btn-sm' name='eliminarActor' value='{$actor["actor_id"]}'><i class='fas fa-trash'></i></button>
+                            <button class='btn btn-outline-danger btn-sm' name='eliminarActor' value='{$actor["actor_id"]}'><i class='fas fa-trash'></i></button>
                             <button class='btn btn-outline-info btn-sm' title='Editar actor'> <i class='fas fa-pen'></i> </button>
                             </td>
                          </tr>";

@@ -1,7 +1,10 @@
 <?php
+session_start();
+
 $nombrePagina = "Actor";
 require_once "funciones/ayudante.php";
 require_once "modelos/modelo_actor.php";
+
 
 $nombreActor = $_POST["nombreActor"] ?? "";
 $apellidoActor = $_POST["apellidoActor"] ?? "";
@@ -20,17 +23,20 @@ try {
         }
 
         $datos = compact("nombreActor", "apellidoActor");
-
         $actoresInsertados = insertarActores($conexion, $datos);
+        $_SESSION["mensaje"] = "Los datos fueron creados correctamente";
 
         if (!$actoresInsertados) {
             throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
         }
+        //redireccionar la pagina
+        redireccionar('actor.php');
+
 
     }
     if (isset($_POST["eliminarActor"])) {
 
-            $idActor = $_POST["eliminarActor"] ?? "";
+        $idActor = $_POST["eliminarActor"] ?? "";
 
 //validar datos
         if (empty($idActor)) {
@@ -40,7 +46,7 @@ try {
 
 //eliminar
         $eliminado = eliminarActores($conexion, $datos);
-        $mensaje = "Los datos fueron eliminados correctamente";
+        $_SESSION["mensaje"] = "Los datos fueron eliminados correctamente";
 
 //Lanzar error
 
@@ -55,6 +61,6 @@ try {
 }
 
 
-    $actores = obtenerActores($conexion);
+$actores = obtenerActores($conexion);
 
-    include_once "vistas/vista_actor.php";
+include_once "vistas/vista_actor.php";

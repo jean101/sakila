@@ -6,26 +6,25 @@ require_once "modelos/modelo_categoria.php";
 
 $nombre = $_POST["nombre"] ?? "";
 
-    try {
-        if (isset($_POST["enviar_categoria"])) {
+try {
+    if (isset($_POST["enviar_categoria"])) {
 
-            if (empty($nombre)) {
-                throw new Exception("La categoria no puede estar vacio");
-            }
-
-            //preparar el array con los datos
-            $datos = compact("nombre");
-            //insertar datos
-            $categoriasInsertadas = insertarCategorias($conexion, $datos);
-            $mensaje = "todo esta insertado correctamente";
-            if (!$categoriasInsertadas) {
-                throw new Exception("Los datos no se han insertado correctamente");
-            }
+        if (empty($nombre)) {
+            throw new Exception("La categoria no puede estar vacio");
         }
-    } catch (Exception $e) {
-        $error = $e->getMessage();
-    }
 
+        //preparar el array con los datos
+        $datos = compact("nombre");
+        //insertar datos
+        $categoriasInsertadas = insertarCategorias($conexion, $datos);
+        $_SESSION["mensaje"] = "todo esta insertado correctamente";
+        if (!$categoriasInsertadas) {
+            throw new Exception("Los datos no se han insertado correctamente");
+        }
+    }
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
 
 $categorias = obtenerCategorias($conexion);

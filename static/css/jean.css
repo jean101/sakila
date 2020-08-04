@@ -1,11 +1,16 @@
-.activo{
+.activo {
     color: black;
     background-color: white;
 }
 
-.yy{
+.yy {
     color: white;
 }
-.ww{
+
+.ww {
     color: lightgrey;
+}
+
+.navmenu {
+    height: 100%;
 }

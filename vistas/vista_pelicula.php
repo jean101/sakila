@@ -46,18 +46,18 @@
                         </div>
                         <div class="mb-3">
                             <label for="anolanzamiento" class="form-label">Año de lanzamiento</label>
-                            <input class="form-control" list="listadoAnios" name="anoLanzamiento"id="anolanzamiento" placeholder="Elige el año de lanzamiento">
+                            <input class="form-control" list="listadoAnios" name="anoLanzamiento" id="anolanzamiento"
+                                   placeholder="Elige el año de lanzamiento">
                             <datalist id="listadoAnios">
 
                                 <?php
-                                for ($year = date ("y"); $year >= 1980; $year--){
+                                for ($year = date("y"); $year >= 1980; $year--) {
                                     echo "<option value=\"{$year}\">";
                                 }
 
                                 ?>
 
                             </datalist>
-
 
 
                         </div>
@@ -132,15 +132,14 @@
                             <select name="caracteristicas" id="caracteristicas" class="form-select">
                                 <option value=""> selecciona las caracteristicas</option>
                                 <?php
-                                $caracteristicas = ["trailers","commentaries","deleted scenes","Behind the scenes"];
-                                foreach ($caracteristicas as $caracteristica){
+                                $caracteristicas = ["trailers", "commentaries", "deleted scenes", "Behind the scenes"];
+                                foreach ($caracteristicas as $caracteristica) {
                                     echo "<option value=\"{$caracteristica}\">{$caracteristica}</option>";
                                 }
                                 ?>
 
                             </select>
                         </div>
-
 
 
                         <div class="mb-3">
@@ -154,8 +153,8 @@
 
                 <?php
                 include_once "partes/partes_alerta.php";
-                include_once "partes/partes_foot.html";
-                ?>
+                include_once "partes/partes_foot.php";
+?>
 
                 <hr class="ya">
                 <div class="col-md-12">

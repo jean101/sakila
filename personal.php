@@ -56,7 +56,7 @@ try {
         $datos = compact("nombre", "apellido", "idDireccion", "imagen", "email", "idTienda", "activo", "username", "password");
         //insertar datos
         $personalInsertado = insertarPersonal($conexion, $datos);
-        $mensaje = "todo esta insertado correctamente";
+        $_SESSION["mensaje"] = "todo esta insertado correctamente";
         if (!$personalInsertado) {
             throw new Exception("Los datos no se han insertado correctamente");
         }

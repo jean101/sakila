@@ -80,7 +80,8 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <button type="submit" name="guardar_datos" class="btn btn-success">Guardar datos</button>
+                                    <button type="submit" name="guardar_datos" class="btn btn-success">Guardar datos
+                                    </button>
 
 
                                 </div>
@@ -93,8 +94,8 @@
 
                     <?php
                     include_once "partes/partes_alerta.php";
-                    include_once "partes/partes_foot.html";
-                    ?>
+                    include_once "partes/partes_foot.php";
+?>
                 </div>
 
 
@@ -120,15 +121,15 @@
 
 
                                 if ($infoCliente['active'] == 1) {
-                                 $icono = '<i class=\'fas fa-check text-success\'> </i>';
-                                } else{
+                                    $icono = '<i class=\'fas fa-check text-success\'> </i>';
+                                } else {
 
-                                $icono = '<i class=\'fas fa-times text-danger\'></i>';
+                                    $icono = '<i class=\'fas fa-times text-danger\'></i>';
                                 }
                                 echo "<tr>
                                 <td>{$infoCliente["customer_id"]}</td>
                                 <td>{$infoCliente["store_id"]}</td>
-                                <td> ". ucwords (strtolower($infoCliente["name"]) )."</td>
+                                <td> " . ucwords(strtolower($infoCliente["name"])) . "</td>
                                 <td>{$infoCliente["email"]}</td>
                                 <td>{$infoCliente["address"]}</td>
                                 <td>{$infoCliente["activo"]}

@@ -70,55 +70,58 @@ include_once "partes/partes_head.php";
                 <hr class="jmm">
                 <?php
                 ?>
-                <?php if (empty($pais)){ ?>
+                <?php if (empty($paises)) { ?>
                     <div class="alert alert-info" role="alert">
                         no hay registros
                     </div>
-                <?php }else{ ?>
+                <?php } else { ?>
 
 
-                <div class="col-md-9">
-                    <div class="row">
-                        <table class="table">
-                            <thead class="real">
-                            <th scope="col">country_id</th>
-                            <th scope="col">Country</th>
-                            </thead>
-                            <tbody>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <form action="" method="post">
+                                <table class="table">
+                                    <thead class="real">
+                                    <th scope="col">country_id</th>
+                                    <th scope="col">Country</th>
+                                    <th scope="col">Acciones</th>
+
+                                    </thead>
+                                    <tbody>
 
 
-                            <?php
-                            foreach ($paises
+                                    <?php
+                                    foreach ($paises
 
-                            as $pais) {
+                                             as $pais) {
 
-                            echo "<tr>
+                                        echo "<tr>
                                 <th scope=\"row\">{$pais["country_id"]}</th>
                                 <td>{$pais["country"]}</td>
                                 <td>
-                                        <button class='btn btn-outline-success btn-sm' name='eliminarPais' value='{$pais[\"country\"]}'><i class='fas fa-trash'></i></button>
+                                        <button class='btn btn-outline-danger btn-sm' name='eliminarPais' value='{$pais["country"]}'><i class='fas fa-trash'></i></button>
                                         <button class='btn btn-outline-info btn-sm' title='Editar actor'> <i class='fas fa-pen'></i> </button>
                                 </td>
                              </tr>";
 
                                     }
-                                            ?>
-
-                            include_once "partes/partes_foot.html";
+                                    ?>
 
 
-                            </tbody>
+                                    </tbody>
 
-                        </table>
-                        </form>
+                                </table>
+                            </form>
+                            </form>
+
+                        </div>
+
 
                     </div>
-
-
-                </div>
-                <?php
+                    <?php
                 }
-                ?>
+                include_once "partes/partes_foot.php";
+?>
 
 </body>
 
