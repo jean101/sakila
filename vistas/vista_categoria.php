@@ -65,6 +65,8 @@ include "partes/partes_head.php";
                             <thead class="rari">
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Acciones</th>
+
                             </thead>
                             <tbody>
 

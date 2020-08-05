@@ -1,6 +1,6 @@
 <?php
 
-if (isset($error)) {
+if (isset($error) && !empty($error)) {
 
     echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
                        {$error}
@@ -12,7 +12,7 @@ if (isset($error)) {
 
 }
 
-if (isset($mensaje)) {
+if (isset($mensaje)&& !empty($mensaje)) {
 
     echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
                        {$mensaje}

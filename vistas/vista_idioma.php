@@ -47,7 +47,7 @@
 
             <hr class="byb">
 
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="row">
                     <table class="table">
                         <thead class="ding">

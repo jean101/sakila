@@ -1,4 +1,4 @@
-<nav class="navmenu nav flex-column bg-dark">
+<nav class="navmenu nav flex-column bg-dark vh-100">
     <a class="navbar-brand text-white bg-dark" href="#">Sakila</a>
 
     <?php

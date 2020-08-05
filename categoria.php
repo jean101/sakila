@@ -27,7 +27,7 @@ try {
     }
     if (isset($_POST["eliminarCategoria"])) {
 
-        $idActor = $_POST["eliminarCategoria"] ?? "";
+        $idCategoria = $_POST["eliminarCategoria"] ?? "";
 
 //validar datos
         if (empty($idCategoria)) {
@@ -44,6 +44,8 @@ try {
         if (!$eliminadoCategoria) {
             throw new Exception("Los datos no se eliminaron correctamente");
         }
+        //redireccionar la pagina
+        redireccionar('categoria.php');
     }
 
 } catch (Exception $e) {

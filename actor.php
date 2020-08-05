@@ -52,6 +52,9 @@ try {
         if (!$eliminado) {
             throw new Exception("Los datos no se eliminaron correctamente");
         }
+        //redireccionar la pagina
+        redireccionar('actor.php');
+
     }
 
 } catch (Exception $e) {
