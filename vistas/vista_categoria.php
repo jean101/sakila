@@ -44,37 +44,22 @@ include "partes/partes_head.php";
 
                         <?php
 
-                        if (isset($error)) {
-
-                            echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-
-
-                        }
-
-                        if (isset($mensaje)) {
-
-                            echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                       {$mensaje};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-                        }
+                        include_once "partes/partes_alerta.php";
                         ?>
 
-                    </form>
 
                 </div>
 
 
                 <hr class="xv">
-
-                <div class="col-md-9">
+                <?php
+                ?>
+                <?php if (empty($categorias)){ ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
+                    </div>
+                <?php }else{ ?>
+                <div class="col-md-12">
                     <div class="row">
                         <table class="table">
                             <thead class="rari">
@@ -88,9 +73,13 @@ include "partes/partes_head.php";
                             foreach ($categorias as $categoria) {
 
                                 echo "<tr>
-            <th scope=\"row\">{$categoria["category_id"]}</th>
-            <td>{$categoria["name"]}</td>
-         </tr>";
+                                                <th scope=\"row\">{$categoria["category_id"]}</th>
+                                                <td>{$categoria["name"]}</td>
+                                                <td>
+                                                <button class='btn btn-outline-danger btn-sm' name='eliminarCategoria' value='{$categoria["category_id"]}'><i class='fas fa-trash'></i></button>
+                                                <button class='btn btn-outline-info btn-sm' title='Editar categoria'> <i class='fas fa-pen'></i> </button>
+                                                </td>
+                                          </tr>";
 
                             }
 
@@ -98,14 +87,20 @@ include "partes/partes_head.php";
 
 
                             </tbody>
-
                         </table>
+                        </form>
+
 
                     </div>
+                    <?php
+                    }
+                    ?>
+
+
                 </div>
 
 </body>
 <?php
-include_once "partes/partes_foot.html";
+include_once "partes/partes_foot.php";
 ?>
 </html>

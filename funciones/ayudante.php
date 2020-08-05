@@ -1,5 +1,9 @@
 <?php
 
+if (session_status()== 1){
+    session_start();
+}
+
 function reportarErrores($numero, $mensaje, $archivo, $linea)
 {
     $codigos = [

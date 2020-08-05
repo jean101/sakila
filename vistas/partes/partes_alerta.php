@@ -3,7 +3,7 @@
 if (isset($error)) {
 
     echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error};
+                       {$error}
                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>
@@ -15,7 +15,7 @@ if (isset($error)) {
 if (isset($mensaje)) {
 
     echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                       {$mensaje};
+                       {$mensaje}
                    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>

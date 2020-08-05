@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $nombrePagina = "Actor";
 require_once "funciones/ayudante.php";

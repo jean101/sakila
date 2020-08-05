@@ -48,28 +48,7 @@
                 </div>
                 <?php
 
-                if (isset($error)) {
-
-                    echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error}
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-
-
-                }
-
-                if (isset($mensaje) && !empty($mensaje)) {
-
-
-                    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                       {$mensaje}
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-                }
+                include_once "partes/partes_alerta.php";
                 ?>
 
 
@@ -131,11 +110,8 @@
 
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                    crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-                    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-                    crossorigin="anonymous"></script>
+            <?php
+            include_once "partes/partes_foot.php";
+            ?>
 </body>
 </html>

@@ -20,13 +20,37 @@ try {
         $datos = compact("pais");
 
         $paisesInsertados = insertarPaises($conexion, $datos);
+
         $_SESSION["mensaje"] = "Los datos fueron creados correctamente";
 
         if (!$paisesInsertados) {
             throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
         }
+        //redireccionar la pagina
+        redireccionar('pais.php');
 
     }
+    if (isset($_POST["eliminarPais"])) {
+
+        $idPais = $_POST["eliminarPais"] ?? "";
+
+//validar datos
+        if (empty($idPais)) {
+            throw new Exception("El valor del id esta vacio");
+        }
+        $datos = compact("idPais");
+
+//eliminar
+        $eliminadoPaises = eliminarPaises($conexion, $datos);
+        $_SESSION["mensaje"] = "Los datos fueron eliminados correctamente";
+
+//Lanzar error
+
+        if (!$eliminadoPaises) {
+            throw new Exception("Los datos no se eliminaron correctamente");
+        }
+    }
+
 } catch (Exception $e) {
     $error = $e->getMessage();
 

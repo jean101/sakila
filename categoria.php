@@ -21,7 +21,31 @@ try {
         if (!$categoriasInsertadas) {
             throw new Exception("Los datos no se han insertado correctamente");
         }
+        //redireccionar la pagina
+        redireccionar('categoria.php');
+
     }
+    if (isset($_POST["eliminarCategoria"])) {
+
+        $idActor = $_POST["eliminarCategoria"] ?? "";
+
+//validar datos
+        if (empty($idCategoria)) {
+            throw new Exception("El valor del id esta vacio");
+        }
+        $datos = compact("idCategoria");
+
+//eliminar
+        $eliminadoCategoria = eliminarCategorias($conexion, $datos);
+        $_SESSION["mensaje"] = "Los datos fueron eliminados correctamente";
+
+//Lanzar error
+
+        if (!$eliminadoCategoria) {
+            throw new Exception("Los datos no se eliminaron correctamente");
+        }
+    }
+
 } catch (Exception $e) {
     $error = $e->getMessage();
 }

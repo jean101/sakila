@@ -41,27 +41,7 @@ include_once "partes/partes_head.php";
 
                 <?php
 
-                if (isset($error)) {
-
-                    echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                                   {$error};
-                               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                                        <span aria-hidden=\"true\">&times;</span>
-                                    </button>
-                                </div>";
-
-
-                }
-
-                if (isset($mensaje)) {
-
-                    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                                   {$mensaje};
-                               <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                                        <span aria-hidden=\"true\">&times;</span>
-                                    </button>
-                                </div>";
-                }
+               include_once "partes/partes_alerta.php";
                 ?>
 
 
@@ -77,7 +57,7 @@ include_once "partes/partes_head.php";
                 <?php } else { ?>
 
 
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="row">
                             <form action="" method="post">
                                 <table class="table">
@@ -100,7 +80,7 @@ include_once "partes/partes_head.php";
                                 <td>{$pais["country"]}</td>
                                 <td>
                                         <button class='btn btn-outline-danger btn-sm' name='eliminarPais' value='{$pais["country"]}'><i class='fas fa-trash'></i></button>
-                                        <button class='btn btn-outline-info btn-sm' title='Editar actor'> <i class='fas fa-pen'></i> </button>
+                                        <button class='btn btn-outline-info btn-sm' title='Editar pais'> <i class='fas fa-pen'></i> </button>
                                 </td>
                              </tr>";
 

@@ -109,8 +109,9 @@
 
                     </form>
                     <?php
+                    include_once "partes/partes_alerta.php";
+
                     include_once "partes/partes_foot.php";
-include_once "partes/partes_alerta.php";
                     ?>
                 </div>
 

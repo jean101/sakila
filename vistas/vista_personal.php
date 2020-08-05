@@ -124,28 +124,7 @@ include "partes/partes_head.php";
 
                 <?php
 
-                if (isset($error)) {
-
-                    echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">
-                       {$error};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-
-
-                }
-
-
-                if (isset($mensaje)) {
-
-                    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">
-                         {$mensaje};
-                   <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                            <span aria-hidden=\"true\">&times;</span>
-                        </button>
-                    </div>";
-                }
+               include_once "partes/partes_alerta.php";
                 ?>
 
 
@@ -201,6 +180,6 @@ include "partes/partes_head.php";
 
 </body>
 <?php
-include_once "partes/partes_foot.html";
+include_once "partes/partes_foot.php";
 ?>
 </html>
