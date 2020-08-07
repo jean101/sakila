@@ -4,6 +4,7 @@ $nombrePagina = "idioma";
 require_once "modelos/modelo_idioma.php";
 require_once "funciones/ayudante.php";
 $lenguaje = $_POST["lenguaje"] ?? "";
+$idIdioma = $_POST["idIdioma"] ?? "";
 
 
 try {
@@ -16,12 +17,25 @@ try {
         //preparar el array con los datos
         $datos = compact("lenguaje");
         //insertar datos
-        $idiomaInsertado = insertarIdioma($conexion, $datos);
-        $_SESSION["mensaje"] = "todo esta insertado correctamente";
-        if (!$idiomaInsertado) {
-            throw new Exception("Los datos no se han insertado correctamente");
+        if (empty($idIdioma)) {
+            $idiomaInsertado = insertarIdioma($conexion, $datos);
+
+            $_SESSION["mensaje"] = "todo esta insertado correctamente";
+            if (!$idiomaInsertado) {
+                throw new Exception("Los datos no se han insertado correctamente");
+            }
+        } else {
+            //agregar el id en array datos
+            $datos["idIdioma"]= $idIdioma;
+            //actualizar datos
+            $idiomaEditado= editarIdioma($conexion,$datos);
+            $_SESSION["mensaje"] = " Datos modificados  correctamente";
+            if (!$idiomaEditado){
+                throw new Exception("ocurrio un error al modificar los datos");
+            }
+
         }
-        //redireccionar la pagina
+//redireccionar la pagina
         redireccionar('idioma.php');
     }
 
@@ -48,6 +62,18 @@ try {
         redireccionar('idioma.php');
     }
 
+    //editar idioma
+    if (isset($_POST["editarIdioma"])){
+
+        $idIdioma = $_POST["editarIdioma"] ?? "";
+        if (empty($idIdioma)){
+            throw new Exception("El valor del id esta vacio");
+
+        }
+        $datos = compact("idIdioma");
+            $resultado= obtenerIdiomaPorId($conexion, $datos);
+            $lenguaje = $resultado["name"];
+    }
 } catch (Exception $e) {
     $error = $e->getMessage();
 }

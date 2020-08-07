@@ -5,6 +5,8 @@ require_once "funciones/ayudante.php";
 require_once "modelos/modelo_categoria.php";
 
 $nombre = $_POST["nombre"] ?? "";
+$idCategoria = $_POST["idCategoria"] ?? "";
+
 
 try {
     if (isset($_POST["enviar_categoria"])) {
@@ -16,10 +18,20 @@ try {
         //preparar el array con los datos
         $datos = compact("nombre");
         //insertar datos
-        $categoriasInsertadas = insertarCategorias($conexion, $datos);
-        $_SESSION["mensaje"] = "todo esta insertado correctamente";
-        if (!$categoriasInsertadas) {
-            throw new Exception("Los datos no se han insertado correctamente");
+        if (empty($idCategoria)) {
+            $categoriasInsertadas = insertarCategorias($conexion, $datos);
+            $_SESSION["mensaje"] = "todo esta insertado correctamente";
+            if (!$categoriasInsertadas) {
+                throw new Exception("Los datos no se han insertado correctamente");
+            }
+        } else {
+            $datos["idCategoria"]= $idCategoria;
+            //actualizar datos
+            $categoriaEditada= editarCategoria($conexion,$datos);
+            $_SESSION["mensaje"] = " Datos modificados  correctamente";
+            if (!$categoriaEditada){
+                throw new Exception("ocurrio un error al modificar los datos");
+            }
         }
         //redireccionar la pagina
         redireccionar('categoria.php');
@@ -31,7 +43,7 @@ try {
 
 //validar datos
         if (empty($idCategoria)) {
-            throw new Exception("El valor del id esta vacio");
+            throw new Exception("El valor de la categoria esta vacio");
         }
         $datos = compact("idCategoria");
 
@@ -47,6 +59,20 @@ try {
         //redireccionar la pagina
         redireccionar('categoria.php');
     }
+
+        if (isset($_POST["editarCategoria"])){
+
+            $idCategoria = $_POST["editarCategoria"] ?? "";
+            if (empty($idCategoria)){
+                throw new Exception("El valor del id esta vacio");
+
+            }
+            $datos = compact("idCategoria");
+            $resultado= obtenerCategoriaPorId($conexion, $datos);
+            $nombre = $resultado["name"];
+        }
+
+
 
 } catch (Exception $e) {
     $error = $e->getMessage();

@@ -25,23 +25,29 @@ include "partes/partes_head.php";
             <div class="row">
 
                 <div class="col-md-5">
-                    <form action="" method="post">
-
-                        <div class="mb-3">
-                            <label class="asa" for="nombre" class="form-label">nombre de la categoria</label>
-                            <input type="text" name="nombre" class="form-control" id="nombre"
-                                   placeholder="Escribe el nombre de la categoria">
 
 
-                        </div>
 
-                        <div class="mb-3">
-                            <button type="submit" name="enviar_categoria" class="btn btn-success">Enviar categoria
-                            </button>
+<form action="" method="post">
+    <input type="hidden" name="idCategoria" value="<?= $idCategoria ?>">
+
+    <div class="mb-3">
+        <label  for="nombre" class="form-label">nombre de la categoria</label>
+        <input type="text" name="nombre" value="<?= $nombre?>" class="form-control" id="nombre"
+               placeholder="Escribe el nombre de la categoria">
 
 
-                        </div>
+    </div>
 
+    <div class="mb-3">
+        <button type="submit" name="enviar_categoria" class="btn btn-success">Enviar categoria
+        </button>
+
+
+    </div>
+
+
+</form>
                         <?php
 
                         include_once "partes/partes_alerta.php";
@@ -61,8 +67,9 @@ include "partes/partes_head.php";
                 <?php }else{ ?>
                 <div class="col-md-12">
                     <div class="row">
-                        <table class="table">
-                            <thead class="rari">
+                        <form action="" method="post">
+                            <table class="table">
+                                <thead class="rari">
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Acciones</th>
@@ -79,7 +86,7 @@ include "partes/partes_head.php";
                                                 <td>{$categoria["name"]}</td>
                                                 <td>
                                                 <button class='btn btn-outline-danger btn-sm' name='eliminarCategoria' value='{$categoria["category_id"]}'><i class='fas fa-trash'></i></button>
-                                                <button class='btn btn-outline-info btn-sm' title='Editar categoria'> <i class='fas fa-pen'></i> </button>
+                                                <button class='btn btn-outline-info btn-sm' title='Editar categoria' value='{$categoria["category_id"]}' name='editarCategoria'> <i class='fas fa-pen'></i> </button>
                                                 </td>
                                           </tr>";
 
