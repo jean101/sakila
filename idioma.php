@@ -21,7 +21,33 @@ try {
         if (!$idiomaInsertado) {
             throw new Exception("Los datos no se han insertado correctamente");
         }
+        //redireccionar la pagina
+        redireccionar('idioma.php');
     }
+
+    if (isset($_POST["eliminarIdiomas"])) {
+
+        $idIdioma = $_POST["eliminarIdiomas"] ?? "";
+
+//validar datos
+        if (empty($idIdioma)) {
+            throw new Exception("El valor del id esta vacio");
+        }
+        $datos = compact("idIdioma");
+
+//eliminar
+        $eliminadoIdioma = eliminarIdiomas($conexion, $datos);
+        $_SESSION["mensaje"] = "Los datos fueron eliminados correctamente";
+
+//Lanzar error
+
+        if (!$eliminadoIdioma) {
+            throw new Exception("Los datos no se eliminaron correctamente");
+        }
+        //redireccionar la pagina
+        redireccionar('idioma.php');
+    }
+
 } catch (Exception $e) {
     $error = $e->getMessage();
 }
