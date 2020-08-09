@@ -29,4 +29,15 @@ DELETE FROM actor WHERE actor_id= :idActor";
 
 }
 
+function obtenerActorPorId($conexion,$datos){
+    $sql= "SELECT * from actor where actor_id = :idActor;";
+    $query = $conexion-> prepare($sql);
+    $query->execute ($datos);
+    return $query->fetch();
+}
+function editarActor($conexion,$datos){
+    $sql = "update actor  set first_name ,last_name = :nombreActor,apellidoActor where actor_id = :idActor;";
+    return $conexion->prepare($sql)->execute($datos);
+
+}
 

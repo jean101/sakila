@@ -7,6 +7,8 @@ require_once "modelos/modelo_actor.php";
 
 $nombreActor = $_POST["nombreActor"] ?? "";
 $apellidoActor = $_POST["apellidoActor"] ?? "";
+$idActor = $_POST["idActor"] ?? "";
+
 
 try {
     if (isset($_POST["Guardar_actor"])) {
@@ -22,11 +24,21 @@ try {
         }
 
         $datos = compact("nombreActor", "apellidoActor");
-        $actoresInsertados = insertarActores($conexion, $datos);
-        $_SESSION["mensaje"] = "Los datos fueron creados correctamente";
 
-        if (!$actoresInsertados) {
-            throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
+        if ($idActor) {
+            $actoresInsertados = insertarActores($conexion, $datos);
+            $_SESSION["mensaje"] = "Los datos fueron creados correctamente";
+            if (!$actoresInsertados) {
+                throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
+            }
+        } else {
+            $datos["idActor"]= $idPais;
+            //actualizar datos
+            $actorEditado= editarActor($conexion,$datos);
+            $_SESSION["mensaje"] = " Datos modificados  correctamente";
+            if (!$actorEditado){
+                throw new Exception("ocurrio un error al modificar los datos");
+            }
         }
         //redireccionar la pagina
         redireccionar('actor.php');
@@ -55,6 +67,17 @@ try {
         //redireccionar la pagina
         redireccionar('actor.php');
 
+        if (isset($_POST["editarActor"])){
+
+            $idActor = $_POST["editarActor"] ?? "";
+            if (empty($idActor)){
+                throw new Exception("El valor del id esta vacio");
+
+            }
+            $datos = compact("idPais");
+            $resultado= obtenerActorPorId($conexion, $datos);
+            $nombreActor = $resultado["name"];
+        }
     }
 
 } catch (Exception $e) {

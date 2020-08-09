@@ -86,7 +86,7 @@
                             <td>{$actor["last_name"]}</td>
                             <td>
                             <button class='btn btn-outline-danger btn-sm' name='eliminarActor' value='{$actor["actor_id"]}'><i class='fas fa-trash'></i></button>
-                            <button class='btn btn-outline-info btn-sm' title='Editar actor'> <i class='fas fa-pen'></i> </button>
+                            <button class='btn btn-outline-info btn-sm' title='Editar actor' value='{$actor["actor_id"]}' name='editarActor'> <i class='fas fa-pen'></i> </button>
                             </td>
                          </tr>";
 

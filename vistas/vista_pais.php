@@ -71,16 +71,14 @@ include_once "partes/partes_head.php";
 
 
                                     <?php
-                                    foreach ($paises
-
-                                             as $pais) {
+                                    foreach ($paises as $pais) {
 
                                         echo "<tr>
                                 <th scope=\"row\">{$pais["country_id"]}</th>
                                 <td>{$pais["country"]}</td>
                                 <td>
                                         <button class='btn btn-outline-danger btn-sm' name='eliminarPais' value='{$pais["country"]}'><i class='fas fa-trash'></i></button>
-                                        <button class='btn btn-outline-info btn-sm' title='Editar pais'> <i class='fas fa-pen'></i> </button>
+                                        <button class='btn btn-outline-info btn-sm' title='Editar pais ' value='{$pais["country"]}' name='editarPais' > <i class='fas fa-pen'></i> </button>
                                 </td>
                              </tr>";
 
