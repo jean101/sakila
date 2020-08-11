@@ -22,10 +22,12 @@
                 <div class="col-md-5">
 
                     <form action="" method="post">
+                        <input type="hidden" name="idCiudad" value="<?= $idCiudad ?>">
+
 
                         <div class="mb-3">
-                            <label class="rf" for="ciudad" class="form-label">Digite la ciudad</label>
-                            <input type="text" name="ciudad" class="form-control" id="ciudad"
+                            <label  for="ciudad" class="form-label">Digite la ciudad</label>
+                            <input type="text" name="ciudad"  value="<?= $ciudad?>" class="form-control" id="ciudad"
                                    placeholder="Escribe la ciudad">
 
 
@@ -47,7 +49,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" name="guardar_informacion" class="btn btn-success">guardar
+                            <button type="submit" name="guardar_informacion" class="btn btn-success">Guardar
                                 informacion
                             </button>
 
@@ -56,47 +58,67 @@
                     </form>
                     <?php
                     include_once "partes/partes_alerta.php";
-                    include_once "partes/partes_foot.php";
 ?>
 
                 </div>
 
 
                 <hr class="ya">
-                <div class="col-md-12">
-                    <div class="row">
-                        <table class="table">
-                            <thead class="real">
-                            <th scope="col">country_id</th>
-                            <th scope="col">country</th>
-                            <th scope="col">city</th>
 
-
-                            </thead>
-                            <tbody>
-
-                            <?php
-                            foreach ($infoPaises as $infoPais) {
-
-                                echo "<tr>
-            <th scope=\"row\">{$infoPais["city_id"]}</th>
-            <td>{$infoPais["city"]}</td>
-            <td>{$infoPais["country"]}</td>
-
-         </tr>";
-
-                            }
-
-                            ?>
-
-
-                            </tbody>
-
-                        </table>
-
+                <?php
+                ?>
+                <?php if (empty($ciudades)) { ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
                     </div>
+                <?php } else { ?>
 
+                <div class="col-md-12">
+                    <form action="" method="post">
+                        <div class="row">
+                            <table class="table">
+                                <thead class="real">
+                                <th scope="col">country_id</th>
+                                <th scope="col">country</th>
+                                <th scope="col">city</th>
+                                <th scope="col">Acciones</th>
+
+
+
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                foreach ($infoPaises as $infoPais) {
+
+                                    echo "<tr>
+                               <th scope=\"row\">{$infoPais["city_id"]}</th>
+                               <td>{$infoPais["city"]}</td>
+                               <td>{$infoPais["country"]}</td>
+                               <td>
+                                 <button class='btn btn-outline-danger btn-sm' name='eliminarCiudad' value='{$infoPais["city_id"]}'><i class='fas fa-trash'></i></button>
+                                 <button class='btn btn-outline-info btn-sm' title='Editar ciudad ' value='{$infoPais["city_id"]}' name='editarCiudad' > <i class='fas fa-pen'></i> </button>
+                                </td>
+                   
+                            </tr>";
+
+                                }
+
+                                ?>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </form>
                 </div>
+                    <?php
+                }
+
+                include_once "partes/partes_foot.php";
+                ?>
 
 
             </div>

@@ -94,46 +94,59 @@
                 </div>
 
                 <hr class="ya">
-                <div class="col-md-12">
-                    <div class="row">
-                        <table class="table">
-                            <thead class="real">
-                            <th scope="col">address_id</th>
-                            <th scope="col">address</th>
-                            <th scope="col">address2</th>
-                            <th scope="col">district</th>
-                            <th scope="col">city</th>
-                            <th scope="col">postal_code</th>
-                            <th scope="col">phone</th>
-
-                            </thead>
-                            <tbody>
-
-                            <?php
-                            foreach ($infoDirecciones as $infoDireccion) {
-
-                                echo "<tr>
-            <th scope=\"row\">{$infoDireccion["address_id"]}</th>
-            <td>{$infoDireccion["address"]}</td>
-            <td>{$infoDireccion["address2"]}</td>
-            <td>{$infoDireccion["district"]}</td>
-            <td>{$infoDireccion["city"]}</td>
-            <td>{$infoDireccion["postal_code"]}</td>
-            <td>{$infoDireccion["phone"]}</td>
-
-         </tr>";
-
-                            }
-
-                            ?>
-
-
-                            </tbody>
-
-                        </table>
-
+                <?php
+                ?>
+                <?php if (empty($direcciones)) { ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
                     </div>
+                <?php } else { ?>
 
+                <div class="col-md-12">
+                    <form action="" method="post">
+                        <div class="row">
+                            <table class="table">
+                                <thead class="real">
+                                <th scope="col">address_id</th>
+                                <th scope="col">address</th>
+                                <th scope="col">address2</th>
+                                <th scope="col">district</th>
+                                <th scope="col">city</th>
+                                <th scope="col">postal_code</th>
+                                <th scope="col">phone</th>
+
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                foreach ($infoDirecciones as $infoDireccion) {
+
+                                    echo "<tr>
+                               <th scope=\"row\">{$infoDireccion["address_id"]}</th>
+                               <td>{$infoDireccion["address"]}</td>
+                               <td>{$infoDireccion["address2"]}</td>
+                               <td>{$infoDireccion["district"]}</td>
+                               <td>{$infoDireccion["city"]}</td>
+                               <td>{$infoDireccion["postal_code"]}</td>
+                               <td>{$infoDireccion["phone"]}</td>
+                   
+                            </tr>";
+
+                                }
+
+                                ?>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </form>
+                </div>
+                <?php
+                }
+                ?>
 
 </body>
 </html>

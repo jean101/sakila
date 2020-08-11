@@ -129,57 +129,68 @@ include "partes/partes_head.php";
 
 
                 <hr class="ya">
-                <div class="col-md-12">
-                    <div class="row">
-                        <table class="table">
-                            <thead class="real">
-                            <th scope="col">staff_id</th>
-                            <th scope="col">first_name</th>
-                            <th scope="col">last_name</th>
-                            <th scope="col">address</th>
-                            <th scope="col">email</th>
-                            <th scope="col">store_id</th>
-                            <th scope="col">active</th>
-                            <th scope="col">username</th>
-                            <th scope="col">password</th>
-
-
-                            </thead>
-                            <tbody>
-
-                            <?php
-                            foreach ($infoPersonales as $infoPersonal) {
-
-                                echo "<tr>
-            <th scope=\"row\">{$infoPersonal["staff_id"]}</th>
-            <td>{$infoPersonal["first_name"]}</td>
-            <td>{$infoPersonal["last_name"]}</td>
-            <td>{$infoPersonal["address"]}</td>
-            <td>{$infoPersonal["email"]}</td>
-            <td>{$infoPersonal["store_id"]}</td>
-            <td>{$infoPersonal["active"]}</td>
-            <td>{$infoPersonal["username"]}</td>
-            <td>{$infoPersonal["password"]}</td>
-
-
-         </tr>";
-
-                            }
-
-                            ?>
-
-
-                            </tbody>
-
-                        </table>
-
+                <?php
+                ?>
+                <?php if (empty($infoPersonales)) { ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
                     </div>
+                <?php } else { ?>
+
+                <div class="col-md-12">
+                    <form action="" method="post">
+                        <div class="row">
+                            <table class="table">
+                                <thead class="real">
+                                <th scope="col">staff_id</th>
+                                <th scope="col">first_name</th>
+                                <th scope="col">last_name</th>
+                                <th scope="col">address</th>
+                                <th scope="col">email</th>
+                                <th scope="col">store_id</th>
+                                <th scope="col">active</th>
+                                <th scope="col">username</th>
+                                <th scope="col">password</th>
 
 
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                foreach ($infoPersonales as $infoPersonal) {
+
+                                    echo "<tr>
+                                <th scope=\"row\">{$infoPersonal["staff_id"]}</th>
+                                <td>{$infoPersonal["first_name"]}</td>
+                                <td>{$infoPersonal["last_name"]}</td>
+                                <td>{$infoPersonal["address"]}</td>
+                                <td>{$infoPersonal["email"]}</td>
+                                <td>{$infoPersonal["store_id"]}</td>
+                                <td>{$infoPersonal["active"]}</td>
+                                <td>{$infoPersonal["username"]}</td>
+                                <td>{$infoPersonal["password"]}</td>
+                    
+                    
+                             </tr>";
+
+                                }
+
+                                ?>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </form>
                 </div>
+                <?php
+                include_once "partes/partes_foot.php";
+                }
+                ?>
 
 </body>
-<?php
-include_once "partes/partes_foot.php";
-?>
+
 </html>

@@ -100,60 +100,69 @@
 
 
                 <hr class="ya">
-                <div class="col-md-12">
-                    <div class="row">
-                        <table class="table">
-                            <thead class="real">
-                            <th scope="col">customer_id</th>
-                            <th scope="col">store_id</th>
-                            <th scope="col">name</th>
-                            <th scope="col">email</th>
-                            <th scope="col">address</th>
-                            <th scope="col">active</th>
-                            <th scope="col">feha</th>
-
-
-                            </thead>
-                            <tbody>
-
-                            <?php
-                            foreach ($infoClientes as $infoCliente) {
-
-
-                                if ($infoCliente['active'] == 1) {
-                                    $icono = '<i class=\'fas fa-check text-success\'> </i>';
-                                } else {
-
-                                    $icono = '<i class=\'fas fa-times text-danger\'></i>';
-                                }
-                                echo "<tr>
-                                <td>{$infoCliente["customer_id"]}</td>
-                                <td>{$infoCliente["store_id"]}</td>
-                                <td> " . ucwords(strtolower($infoCliente["name"])) . "</td>
-                                <td>{$infoCliente["email"]}</td>
-                                <td>{$infoCliente["address"]}</td>
-                                <td>{$infoCliente["activo"]}
-                                
-                                 {$icono}
-
-                            </td>  
-                            <td>{$infoCliente["fecha"]}</td>
-                           
-                         </tr>";
-
-                            }
-
-                            ?>
-
-
-                            </tbody>
-
-                        </table>
-
+                <?php
+                ?>
+                <?php if (empty($infoCliente)) { ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
                     </div>
+                <?php } else { ?>
+                <div class="col-md-12">
+                    <form action="" method="post">
+                        <div class="row">
+                            <table class="table">
+                                <thead class="real">
+                                <th scope="col">customer_id</th>
+                                <th scope="col">store_id</th>
+                                <th scope="col">name</th>
+                                <th scope="col">email</th>
+                                <th scope="col">address</th>
+                                <th scope="col">active</th>
+                                <th scope="col">feha</th>
 
+
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                foreach ($infoClientes as $infoCliente) {
+
+
+                                    if ($infoCliente['active'] == 1) {
+                                        $icono = '<i class=\'fas fa-check text-success\'> </i>';
+                                    } else {
+
+                                        $icono = '<i class=\'fas fa-times text-danger\'></i>';
+                                    }
+                                    echo "<tr>
+                                                   <td>{$infoCliente["customer_id"]}</td>
+                                                   <td>{$infoCliente["store_id"]}</td>
+                                                   <td> " . ucwords(strtolower($infoCliente["name"])) . "</td>
+                                                   <td>{$infoCliente["email"]}</td>
+                                                   <td>{$infoCliente["address"]}</td>
+                                                   <td>{$infoCliente["activo"]}
+                                                   
+                                                    {$icono}
+                   
+                                               </td>  
+                                               <td>{$infoCliente["fecha"]}</td>
+                                              
+                                            </tr>";
+
+                                }
+
+                                ?>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </form>
 
                 </div>
+                <?php }?>
 
 </body>
 </html>

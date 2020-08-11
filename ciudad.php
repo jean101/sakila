@@ -2,12 +2,14 @@
 
 $nombrePagina = "ciudad";
 
-
+require_once "funciones/ayudante.php";
 require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
 $ciudad = $_POST["ciudad"] ?? "";
 $Paises = $_POST["Pais"] ?? "";
+$idCiudad = $_POST["idCiudad"] ?? "";
+
 
 try {
     if (isset($_POST["guardar_informacion"])) {
@@ -22,12 +24,62 @@ try {
         //preparar el array con los datos
         $datos = compact("ciudad");
         //insertar datos
-        $ciudadesInsertadas = insertarPaises($conexion, $datos);
-        $_SESSION["mensaje"] = "todo esta insertado correctamente";
-        if (!$ciudadesInsertadas) {
-            throw new Exception("Los datos no se han insertado correctamente");
+        if (empty($idCiudad)) {
+            $ciudadesInsertadas = insertarPaises($conexion, $datos);
+            $_SESSION["mensaje"] = "todo esta insertado correctamente";
+            if (!$ciudadesInsertadas) {
+                throw new Exception("Los datos no se han insertado correctamente");
+            }
+        } else {
+            $datos["idCiudad"]= $idCiudad;
+            //actualizar datos
+            $ciudadEditada= editarCiudad($conexion,$datos);
+            $_SESSION["mensaje"] = " Datos modificados  correctamente";
+            if (!$ciudadEditada){
+                throw new Exception("ocurrio un error al modificar los datos");
+            }
         }
+//redireccionar la pagina
+        redireccionar('ciudad.php');
     }
+
+    if (isset($_POST["eliminarCiudad"])) {
+
+        $idPais = $_POST["eliminarCiudad"] ?? "";
+
+//validar datos
+        if (empty($idCiudad)) {
+            throw new Exception("El valor del id esta vacio");
+        }
+        $datos = compact("idCiudad");
+
+//eliminar
+        $eliminadoCiudades = eliminarCiudades($conexion, $datos);
+        $_SESSION["mensaje"] = "Los datos fueron eliminados correctamente";
+
+//Lanzar error
+
+        if (!$eliminadoCiudades) {
+            throw new Exception("Los datos no se eliminaron correctamente");
+        }
+//redireccionar la pagina
+        redireccionar('ciudad.php');
+
+    }
+    if (isset($_POST["editarCiudad"])){
+
+        $idCiudad = $_POST["editarCiudad"] ?? "";
+        if (empty($idCiudad)){
+            throw new Exception("El valor del id esta vacio");
+
+        }
+        $datos = compact("idCiudad");
+        $resultado= obtenerCiudadPorId($conexion, $datos);
+        $ciudad = $resultado["city"];
+
+    }
+
+
 } catch (Exception $e) {
     $error = $e->getMessage();
 }

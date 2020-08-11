@@ -157,63 +157,73 @@
 ?>
 
                 <hr class="ya">
-                <div class="col-md-12">
-                    <div class="row">
-                        <table class="table">
-                            <thead class="real">
-                            <th scope="col">id de la pelicula</th>
-                            <th scope="col">titulo</th>
-                            <th scope="col">descripcion</th>
-                            <th scope="col">año de lanzamiento</th>
-                            <th scope="col">idioma oficial</th>
-                            <th scope="col">idioma secundarion</th>
-                            <th scope="col">Duracion de renta</th>
-                            <th scope="col">rental rate</th>
-                            <th scope="col">longitud</th>
-                            <th scope="col">costo de reemplazo</th>
-                            <th scope="col">clasificacion</th>
-                            <th scope="col">caracteristicas especiales</th>
-
-
-                            </thead>
-                            <tbody>
-
-                            <?php
-                            foreach ($infoPeliculas as $infoPelicula) {
-
-                                echo "<tr>
-            <th scope=\"row\">{$infoPelicula["film_id"]}</th>
-            <td>{$infoPelicula["title"]}</td>
-            <td>{$infoPelicula["description"]}</td>
-            <td>{$infoPelicula["release_year"]}</td>
-            <td>{$infoPelicula["name"]}</td>
-            <td>{$infoPelicula["name"]}</td>
-            <td>{$infoPelicula["rental_duration"]}</td>
-            <td>{$infoPelicula["rental_rate"]}</td>
-            <td>{$infoPelicula["length"]}</td>
-            <td>{$infoPelicula["replacement_cost"]}</td>
-            <td>{$infoPelicula["rating"]}</td>
-            <td>{$infoPelicula["special_features"]}</td>
-
-
-         </tr>";
-
-                            }
-
-                            ?>
-
-
-                            </tbody>
-
-                        </table>
-
+                <?php
+                ?>
+                <?php if (empty($infoPeliculas)) { ?>
+                    <div class="alert alert-info" role="alert">
+                        no hay registros
                     </div>
+                <?php } else { ?>
+                <div class="col-md-12">
+                    <form action="" method="post">
+                        <div class="row">
+                            <table class="table">
+                                <thead class="real">
+                                <th scope="col">id de la pelicula</th>
+                                <th scope="col">titulo</th>
+                                <th scope="col">descripcion</th>
+                                <th scope="col">año de lanzamiento</th>
+                                <th scope="col">idioma oficial</th>
+                                <th scope="col">idioma secundarion</th>
+                                <th scope="col">Duracion de renta</th>
+                                <th scope="col">rental rate</th>
+                                <th scope="col">longitud</th>
+                                <th scope="col">costo de reemplazo</th>
+                                <th scope="col">clasificacion</th>
+                                <th scope="col">caracteristicas especiales</th>
 
 
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                foreach ($infoPeliculas as $infoPelicula) {
+
+                                    echo "<tr>
+                               <th scope=\"row\">{$infoPelicula["film_id"]}</th>
+                               <td>{$infoPelicula["title"]}</td>
+                               <td>{$infoPelicula["description"]}</td>
+                               <td>{$infoPelicula["release_year"]}</td>
+                               <td>{$infoPelicula["name"]}</td>
+                               <td>{$infoPelicula["name"]}</td>
+                               <td>{$infoPelicula["rental_duration"]}</td>
+                               <td>{$infoPelicula["rental_rate"]}</td>
+                               <td>{$infoPelicula["length"]}</td>
+                               <td>{$infoPelicula["replacement_cost"]}</td>
+                               <td>{$infoPelicula["rating"]}</td>
+                               <td>{$infoPelicula["special_features"]}</td>
+                   
+                   
+                            </tr>";
+
+                                }
+
+                                ?>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </form>
                 </div>
 
 
             </div>
+            <?php }?>
+
 
 
 </body>

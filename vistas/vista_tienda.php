@@ -68,6 +68,14 @@
                         </div>
 
                         <hr class="ww">
+                        <?php
+                        ?>
+                        <?php if (empty($informacionTiendas)) { ?>
+                            <div class="alert alert-info" role="alert">
+                                no hay registros
+                            </div>
+                        <?php } else { ?>
+
 
                         <div class="col-md-12">
                             <div class="row">
@@ -114,6 +122,7 @@
                     include_once "partes/partes_foot.php";
                     ?>
                 </div>
+                <?php } ?>
 
 
             </div>

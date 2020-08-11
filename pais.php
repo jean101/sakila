@@ -7,7 +7,7 @@ require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
 $idPais = $_POST["idPais"] ?? "";
-$pais = $_POST["pais"] ?? "";
+$pais = $_POST["country"] ?? "";
 
 
 
@@ -75,6 +75,7 @@ try {
             $datos = compact("idPais");
             $resultado= obtenerPaisPorId($conexion, $datos);
             $pais = $resultado["country"];
+
         }
 
 
