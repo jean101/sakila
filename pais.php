@@ -7,8 +7,7 @@ require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
 $idPais = $_POST["idPais"] ?? "";
-$pais = $_POST["country"] ?? "";
-
+$pais = $_POST["pais"] ?? "";
 
 
 

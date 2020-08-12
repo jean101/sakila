@@ -31,7 +31,7 @@ include_once "partes/partes_head.php";
 
                         </div>
                         <div class="mb-3">
-                            <button type="submit" name="guardarPais" class="btn btn-success">guardar Pais</button>
+                            <button type="submit" name="guardarPais" class="btn btn-success">Guardar Pais</button>
 
 
                         </div>

@@ -36,7 +36,7 @@ function obtenerActorPorId($conexion,$datos){
     return $query->fetch();
 }
 function editarActor($conexion,$datos){
-    $sql = "update actor  set first_name ,last_name = :nombreActor, :apellidoActor where actor_id = :idActor;";
+    $sql = "update actor  set first_name=:nombreActor ,last_name= :apellidoActor where actor_id = :idActor;";
     return $conexion->prepare($sql)->execute($datos);
 
 }

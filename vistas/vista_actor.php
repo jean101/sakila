@@ -21,25 +21,25 @@
 
                 <div class="col-md-3">
                     <form action="" method="post">
+                        <input type="hidden" name="idActor" value="<?= $idActor ?>">
 
                         <div class="mb-3">
-                            <label class="fdd" for="nombreActor" class="form-label">Nombre del actor</label>
-                            <input type="text" name="nombreActor" class="form-control" id="nombreActor"
+                            <label  for="nombreActor" class="form-label">Nombre del actor</label>
+                            <input type="text" name="nombreActor" value="<?=$nombreActor?>" class="form-control" id="nombreActor"
                                    placeholder="Escribe el nombre del actor">
 
                         </div>
 
 
                         <div class="mb-3">
-                            <label class="zzz" for="apellidoActor" class="form-label">Apellido del actor</label>
-                            <input type="text" name="apellidoActor" class="form-control" id="apellidoActor"
+                            <label  for="apellidoActor" class="form-label">Apellido del actor</label>
+                            <input type="text" name="apellidoActor" value="<?=$apellidoActor?>" class="form-control" id="apellidoActor"
                                    placeholder="Escribe el apellido del actor">
 
                         </div>
 
                         <div class="mb-3">
                             <button type="submit" name="Guardar_actor" class="btn btn-success">Guardar actor</button>
-
 
                         </div>
 

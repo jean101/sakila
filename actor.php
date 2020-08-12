@@ -25,14 +25,14 @@ try {
 
         $datos = compact("nombreActor", "apellidoActor");
 
-        if ($idActor) {
+        if (empty($idActor)) {
             $actoresInsertados = insertarActores($conexion, $datos);
             $_SESSION["mensaje"] = "Los datos fueron creados correctamente";
             if (!$actoresInsertados) {
                 throw new Exception("ocurrio un error al tratar de insertar los datos del actor");
             }
         } else {
-            $datos["idActor"]= $idPais;
+            $datos["idActor"]= $idActor;
             //actualizar datos
             $actorEditado= editarActor($conexion,$datos);
             $_SESSION["mensaje"] = " Datos modificados  correctamente";
@@ -67,18 +67,24 @@ try {
         //redireccionar la pagina
         redireccionar('actor.php');
 
-        if (isset($_POST["editarActor"])){
-
-            $idActor = $_POST["editarActor"] ?? "";
-            if (empty($idActor)){
-                throw new Exception("El valor del id esta vacio");
-
-            }
-            $datos = compact("idPais");
-            $resultado= obtenerActorPorId($conexion, $datos);
-            $nombreActor = $resultado["name"];
-        }
     }
+    if (isset($_POST["editarActor"])){
+
+        $idActor = $_POST["editarActor"] ?? "";
+        if (empty($idActor)){
+            throw new Exception("El valor del id esta vacio");
+
+        }
+
+        $datos = compact("idActor");
+        $resultado= obtenerActorPorId($conexion, $datos);
+        $nombreActor = $resultado["first_name"];
+        $apellidoActor =$resultado["last_name"];
+
+        imprimirArray($resultado);
+
+    }
+
 
 } catch (Exception $e) {
     $error = $e->getMessage();
