@@ -33,8 +33,9 @@
 
                         </div>
                         <div class="mb-3">
-                            <label class="ws" for="paises"> pais</label>
-                            <select name="paises" id="paises" class="form-select">
+
+                            <label  for="paises">Elige el  pais</label>
+                            <select name="paises"  id="paises" class="form-select">
                                 <option value="paises"> Elija el pais</option>
 
                                 <?php
@@ -67,7 +68,7 @@
 
                 <?php
                 ?>
-                <?php if (empty($ciudades)) { ?>
+                <?php if (empty($infoPaises)) { ?>
                     <div class="alert alert-info" role="alert">
                         no hay registros
                     </div>

@@ -33,7 +33,7 @@
 
                         <div class="mb-3">
                             <label  for="apellidoActor" class="form-label">Apellido del actor</label>
-                            <input type="text" name="apellidoActor" value="<?=$apellidoActor?>" class="form-control" id="apellidoActor"
+                            <input type="text" name="apellidoActor"  class="form-control" id="apellidoActor"
                                    placeholder="Escribe el apellido del actor">
 
                         </div>
