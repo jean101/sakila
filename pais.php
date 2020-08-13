@@ -85,7 +85,6 @@ try {
 
 
 $paises = obtenerPaises($conexion);
-$infoPaises = obtenerInfoPaises($conexion);
 
 
 include_once "vistas/vista_pais.php";

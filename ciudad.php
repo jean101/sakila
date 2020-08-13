@@ -6,9 +6,10 @@ require_once "funciones/ayudante.php";
 require_once "modelos/modelo_pais.php";
 require_once "modelos/modelo_ciudades.php";
 
+
 $ciudad = $_POST["ciudad"] ?? "";
 $idCiudad = $_POST["idCiudad"] ?? "";
-$Paises = $_POST["paises"] ?? "";
+$paises = $_POST["paises"] ?? "";
 
 
 
@@ -86,7 +87,7 @@ try {
     $error = $e->getMessage();
 }
 
+$ciudades = obtenerCiudades($conexion);
 
-$infoPaises = obtenerInfoPaises($conexion);
 
 include_once "vistas/vista_ciudad.php";

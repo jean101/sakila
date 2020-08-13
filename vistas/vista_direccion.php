@@ -80,7 +80,7 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" name="guardar_direccion" class="btn btn-success">guardar Direccion
+                            <button type="submit" name="guardar_direccion" class="btn btn-success"><i class="fas fa-save"></i> guardar Direccion
                             </button>
 
                         </div>

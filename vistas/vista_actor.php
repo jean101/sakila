@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" name="Guardar_actor" class="btn btn-success">Guardar actor</button>
+                            <button type="submit"  name="Guardar_actor" class="btn btn-success"><i class="fas fa-save"></i> Guardar actor</button>
 
                         </div>
 

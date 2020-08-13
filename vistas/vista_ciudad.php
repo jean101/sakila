@@ -34,23 +34,36 @@
                         </div>
                         <div class="mb-3">
 
-                            <label  for="paises">Elige el  pais</label>
-                            <select name="paises"  id="paises" class="form-select">
-                                <option value="paises"> Elija el pais</option>
+
+                            <label class="mt-3" for="paises">País:</label>
+                            <select class="form-select  " name="paises" id="paises" value="<?= $paises ?>">
+
+                                <option value="">Selecciona un país</option>
 
                                 <?php
 
-                                foreach ($infoPaises as $paises) {
+                                foreach ($ciudades as $paises){
 
-                                    echo "  <option value=\"{$paises["country"]}\">{$paises["country"]}</option>";
+                                    if($paises['country_id'] == $idPais){
+                                        $seleccionado = "selected";
+                                    } else {
+                                        $seleccionado = "";
+                                    }
+                                    echo "<option {$seleccionado} value=\"{$paises['country_id']}\">{$paises['country']}</option>";
                                 }
+
+
                                 ?>
 
                             </select>
+
+
+
+
                         </div>
 
                         <div class="mb-3">
-                            <button type="submit" name="guardar_informacion" class="btn btn-success">Guardar
+                            <button type="submit" name="guardar_informacion" class="btn btn-success"><i class="fas fa-save"></i> Guardar
                                 informacion
                             </button>
 
@@ -68,7 +81,7 @@
 
                 <?php
                 ?>
-                <?php if (empty($infoPaises)) { ?>
+                <?php if (empty($ciudades)) { ?>
                     <div class="alert alert-info" role="alert">
                         no hay registros
                     </div>
@@ -90,15 +103,15 @@
                                 <tbody>
 
                                 <?php
-                                foreach ($infoPaises as $infoPais) {
+                                foreach ($ciudades as $ciudad) {
 
                                     echo "<tr>
-                               <th scope=\"row\">{$infoPais["city_id"]}</th>
-                               <td>{$infoPais["city"]}</td>
-                               <td>{$infoPais["country"]}</td>
+                               <th scope=\"row\">{$ciudad["city_id"]}</th>
+                               <td>{$ciudad["city"]}</td>
+                               <td>{$ciudad["country"]}</td>
                                <td>
-                                 <button class='btn btn-outline-danger btn-sm' name='eliminarCiudad' value='{$infoPais["city_id"]}'><i class='fas fa-trash'></i></button>
-                                 <button class='btn btn-outline-info btn-sm' title='Editar ciudad ' value='{$infoPais["city_id"]}' name='editarCiudad' > <i class='fas fa-pen'></i> </button>
+                                 <button class='btn btn-outline-danger btn-sm' name='eliminarCiudad' value='{$ciudad["city_id"]}'><i class='fas fa-trash'></i></button>
+                                 <button class='btn btn-outline-info btn-sm' title='Editar ciudad ' value='{$ciudad["city_id"]}' name='editarCiudad' > <i class='fas fa-pen'></i> </button>
                                 </td>
                    
                             </tr>";

@@ -143,7 +143,7 @@
 
 
                         <div class="mb-3">
-                            <button type="submit" name="guardar_descripcion" class="btn btn-success">Guardar descripcion
+                            <button type="submit" name="guardar_descripcion" class="btn btn-success"><i class="fas fa-save"></i> Guardar descripcion
                             </button>
 
                         </div>

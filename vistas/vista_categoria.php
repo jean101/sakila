@@ -40,7 +40,7 @@ include "partes/partes_head.php";
     </div>
 
     <div class="mb-3">
-        <button type="submit" name="enviar_categoria" class="btn btn-success">Enviar categoria
+        <button type="submit" name="enviar_categoria" class="btn btn-success"><i class="fas fa-save"></i> Enviar categoria
         </button>
 
 

@@ -80,7 +80,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <button type="submit" name="guardar_datos" class="btn btn-success">Guardar datos
+                                    <button type="submit" name="guardar_datos" class="btn btn-success"> <i class="fas fa-save"></i> Guardar datos
                                     </button>
 
 

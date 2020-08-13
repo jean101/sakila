@@ -61,7 +61,7 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" name="guardar_informacion" class="btn btn-success">Guardar
+                            <button type="submit" name="guardar_informacion" class="btn btn-success"> <i class="fas fa-save"></i> Guardar
                                 Informacion
                             </button>
 

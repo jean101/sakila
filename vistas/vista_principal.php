@@ -61,7 +61,7 @@ include "partes/partes_head.php";
 
                         <div class="mb-3">
 
-                            <button type="submit" name="guardar datos" class="btn btn-success">Guardar Datos</button>
+                            <button type="submit" name="guardar datos" class="btn btn-success"><i class="fas fa-save"></i> Guardar Datos</button>
 
                         </div>
 
